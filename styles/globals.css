@@ -1,0 +1,29 @@
+
+.animateleft{visibility: visible; animation-name: fadeInLeft;}
+.animateright{visibility: visible; animation-name: fadeInRight;}
+.animateUP{visibility: visible; animation-name: fadeInUp;}
+.img100{width: 100% !important;}
+.imgcenter{ margin: auto;}
+.imgicon70{max-width: 70px;  min-width: 70px; width: 70px; vertical-align: initial;}
+.themcolor{color: #246fb7;}
+.spanc span{color: #2f69b0;}
+.awardbox .awarimgbox{box-shadow: 0px 10px 30px 0px rgb(0 0 0 / 9%); padding: 7px; margin-bottom: 20px;}
+.coleql1{
+    background: #ffffff;
+    box-shadow: 0 7px 22px rgb(0 0 0 / 8%);
+    border: 15px solid#f4f7fc;
+}
+.coleql2{
+    background: #f4f7fc;
+    box-shadow: 0 7px 22px rgb(0 0 0 / 8%);
+    border: 15px solid#fff;
+}
+.h3themecolor{color: #2e68b0; padding-top: 15px; margin-bottom: 5px;}
+.homeservicebg{background-image: url(/assets/img/feature-bg.jpg);}
+.homecontactbg{background-image: url(/assets/images/contact/home-two.jpg); visibility: visible; animation-name: fadeInRight;}
+@media (min-width:768px){
+    .mycall7{width: 14.28%; max-width: 14.28%;}
+}
+.whitep{color: #fff;}
+.whitep2{color: #2e68b0; font-size: 22px;}
+.bgdarkyoma{background-color: #fafafa;}
