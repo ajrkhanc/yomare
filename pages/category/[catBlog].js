@@ -24,7 +24,7 @@ export async function getServerSideProps(context) {
     }
 }
 
-export default function index({posts, cats}) {
+export default function index({posts, cats, posts5}) {
 
     const registerUser = async event => {
         event.preventDefault()
@@ -185,7 +185,7 @@ export default function index({posts, cats}) {
                                 <div className="widget-news-wrap">
                                    
                                 {
-             posts.slice(0,5).map((getpost)=>{             
+             posts5.slice(0,5).map((getpost)=>{             
                         return(  
                                     <div className="widget-news-item">
                                         <img src={getpost.ImageURL} alt={getpost.ImageAlt}/>
