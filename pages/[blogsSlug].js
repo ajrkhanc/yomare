@@ -17,18 +17,18 @@ import moment from 'moment'
 
 
 export async function getServerSideProps(context) {
-    const post5 = await fetch('https://yoma-admin.herokuapp.com/api/posts')
+    const post5 = await fetch('https://yoma-admins.herokuapp.com/api/posts')
     const posts5 = await post5.json()
 
-    const cat = await fetch('https://yoma-admin.herokuapp.com/api/categories')
+    const cat = await fetch('https://yoma-admins.herokuapp.com/api/categories')
     const cats = await cat.json()
 
 
     const posturl = context.params.blogsSlug;
-    const res = await fetch(`https://yoma-admin.herokuapp.com/api/post/${posturl}`)
+    const res = await fetch(`https://yoma-admins.herokuapp.com/api/post/${posturl}`)
     const posts = await res.json()
 
-    const getfeedback = await fetch(`https://yoma-admin.herokuapp.com/api/posts/feed/${posturl}`)
+    const getfeedback = await fetch(`https://yoma-admins.herokuapp.com/api/posts/feed/${posturl}`)
     console.log(getfeedback)
     const postfeedback = await getfeedback.json()
 
@@ -53,7 +53,7 @@ const submitFeedback = async (event) => {
     const feedback = event.target.comments.value;
     const posturl = findparams[3];
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'https://yoma-admin.herokuapp.com/api/feedback/');
+    xhr.open('POST', 'https://yoma-admins.herokuapp.com/api/feedback/');
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     xhr.send('feedback=' + feedback + '&name=' + name + '&email=' + email + '&postslug=' + posturl);
 
@@ -107,7 +107,7 @@ export default function singleblog({ posts, posts5, cats, postfeedback }) {
         <>
             <Head>
                 <title>{posts.Title}</title>
-                <meta name="description" content="Blanchard Research and Training LLP is the leading training provider in South Asia, with expertise in leadership development across hierarchies. Having a global establishment of over 35 years and operational in India since 2008 by Mr Yogesh Sood who is a veteran in business operations and leadership development." />
+                <meta name="description" content="" />
                 <link rel="icon" href="/favicon.png" />
 
                 {/* Twitter */}
@@ -301,7 +301,7 @@ export default function singleblog({ posts, posts5, cats, postfeedback }) {
                                                     <div className="widget-news-item">
                                                         <img src={getpost.ImageURL} alt={getpost.ImageAlt} />
                                                         <div className="widget-news-content">
-                                                            <h5><Link href={getpost.posturl}><a>{getpost.Title}</a></Link></h5>
+                                                            <h5><a href={`/${getpost.posturl}`}>{getpost.Title}</a></h5>
                                                             <span className="date">{moment(getpost.ModifiedDate).format('DD MMMM Y')}</span>
                                                         </div>
                                                     </div>
@@ -320,7 +320,7 @@ export default function singleblog({ posts, posts5, cats, postfeedback }) {
                                         {
                                             cats.slice(0, 12).map((getcats) => {
                                                 return (
-                                                    <li><Link href="#"><a>{getcats.Name}</a></Link></li>
+                                                    <li><a href={`/category/${getcats.Caturl}`}>{getcats.Name}</a></li>
                                                 );
                                             })
                                         }
@@ -331,31 +331,7 @@ export default function singleblog({ posts, posts5, cats, postfeedback }) {
                                 <div className="widget widget-recent-post wow fadeInUp delay-0-4s">
                                     <h3 className="widget-title">Upcoming Events</h3>
                                     <div className="widget-news-wrap">
-
-                                        <div className="widget-news-item">
-                                            <img src="/assets/img/planner.png" alt="" />
-                                            <div className="widget-news-content">
-                                                <h5><Link href="/events"><a>Executive Showcase Event</a></Link></h5>
-                                                <span className="date"><Link href="/events"><a>13th May - 2022</a></Link></span>
-                                            </div>
-                                        </div>
-
-                                        <div className="widget-news-item">
-                                            <img src="/assets/img/planner.png" alt="" />
-                                            <div className="widget-news-content">
-                                                <h5><Link href="/events"><a>Executive Showcase Event</a></Link></h5>
-                                                <span className="date"><Link href="/events"><a>10th June - 2022</a></Link></span>
-                                            </div>
-                                        </div>
-
-                                        <div className="widget-news-item">
-                                            <img src="/assets/img/planner.png" alt="" />
-                                            <div className="widget-news-content">
-                                                <h5><Link href="/events"><a>Executive Showcase Event</a></Link></h5>
-                                                <span className="date"><Link href="/events"><a>8th July - 2022</a></Link></span>
-                                            </div>
-                                        </div>
-
+                                        
                                         <div className="widget-news-item">
                                             <img src="/assets/img/planner.png" alt="" />
                                             <div className="widget-news-content">

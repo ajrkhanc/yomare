@@ -2,20 +2,27 @@ import Link from 'next/link'
 import Head from 'next/head'
 import  moment from 'moment'
 
-export async function getServerSideProps() {
-    const res = await fetch('https://yoma-admins.herokuapp.com/api/posts')
-    const posts = await res.json()
+export async function getServerSideProps(context) {    
+    const post5 = await fetch('https://yoma-admins.herokuapp.com/api/posts')
+    const posts5 = await post5.json()
 
     const cat = await fetch('https://yoma-admins.herokuapp.com/api/categories')
     const cats = await cat.json()
 
+
+    const caturl = context.params.catBlog;
+    const res = await fetch(`https://yoma-admins.herokuapp.com/api/posts/category/${caturl}`)
+    const posts = await res.json()
+
+
     return {
-      props: {
-        posts, 
-        cats,    
-      },
+        props: {
+            posts,
+            posts5,
+            cats
+        },
     }
-  }
+}
 
 export default function index({posts, cats}) {
 
@@ -144,7 +151,7 @@ export default function index({posts, cats}) {
                               <img src={getpost.ImageURL} alt={getpost.ImageAlt}/>
                               </div>
                               <div className="news-content">                                  
-                                  <h4><a href={getpost.posturl}>{getpost.Title}</a></h4>
+                                  <h4><a href={`/${getpost.posturl}`}>{getpost.Title}</a></h4>
                                   <ul className="post-meta-item">                                      
                                       <li>
                                           <i className="fas fa-user"></i>
@@ -183,7 +190,7 @@ export default function index({posts, cats}) {
                                     <div className="widget-news-item">
                                         <img src={getpost.ImageURL} alt={getpost.ImageAlt}/>
                                         <div className="widget-news-content">
-                                            <h5><Link href={getpost.posturl}><a>{getpost.Title}</a></Link></h5>
+                                            <h5><a href={`/${getpost.posturl}`}>{getpost.Title}</a></h5>
                                             <span className="date">{getpost.ModifiedDate}</span>
                                         </div>
                                     </div>
