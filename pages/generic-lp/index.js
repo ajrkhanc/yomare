@@ -68,7 +68,7 @@ export default function GenericLP(){
                                     <input type="email" name="leadsquared_EmailAddress" id="leadsquared_EmailAddress" className="form-control" placeholder="Your Email*" required />
                                     </div>
                                     <div className="form-group col-sm-6">                                   
-                                    <input type="text" name="phone_number" id="phone_number" required="" maxlength="10" minlength="10" className="form-control" placeholder="Phone No.*"/>
+                                    <input type="text" name="phone_number" id="phone_number" required maxlength="10" minlength="10" className="form-control" placeholder="Phone No.*"/>
                                     </div>
                                     <div className="col-sm-6">
                                             <div className="form-group">                                                
@@ -93,23 +93,13 @@ export default function GenericLP(){
                                     </div>
 
                                     <div className="form-group col-sm-6 d-none">
-                                    <select className="form-control" name="referredby">                                        
+                                    <select className="form-control" name="referredby" required>                                        
                                         <option value="From to Paid">From to Paid</option>                                        
                                     </select>                 
-                                    </div>
-
-                                    <div className="col-lg-6 d-none">
-                                        <div className="form-group">
-                                            <label>Business Entity*</label>                              
-                                            <select className="form-control" name="Business_Entity">
-                                                <option value="Ken Blanchard Companies">Ken Blanchard Companies</option>
-                                            </select>
-                                            <div className="help-block with-errors"></div>
-                                        </div>
-                                        </div>                                    
+                                    </div>                                   
                                       
                                     <div className="form-group d-none col-sm-12">                                   
-                                    <input type="text" name="leadsquared_mx_Business_Entity" id="leadsquared_mx_Business_Entity" value="YOMA Business Solutions" className="form-control" />
+                                    <input type="text" name="leadsquared_mx_Business_Entity" id="leadsquared_mx_Business_Entity" value="YOMA Business Solutions" className="form-control" required/>
                                     </div>
 
                                     <div className="col-sm-12">
