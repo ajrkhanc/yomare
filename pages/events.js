@@ -50,51 +50,7 @@ export default function Events(){
                     <h2 className="mainh1"><span></span>Executive Showcase Events Schedule</h2>
                 </div>
                 <div className="row">
-                    
-                    <div className="col-lg-4 col-sm-6">
-                        <div className="pricing-item wow fadeInUp delay-0-2s">
-                            <div className="pricing-header">
-                                <h5 className="pricing-title">Executive Showcase Event</h5>
-                                <span className="price">13th May - 2022</span>
-                                <h3 className="time">03:00 PM to 03:30 PM</h3>
-                            </div>
-                            <a className="theme-btn btn-circle mt-20" href="#register-now">Register Now</a>
-                        </div>
-                    </div>
-                    
-                    <div className="col-lg-4 col-sm-6">
-                        <div className="pricing-item wow fadeInUp delay-0-2s">
-                            <div className="pricing-header">
-                                <h5 className="pricing-title">Executive Showcase Event</h5>
-                                <span className="price">10th June - 2022</span>
-                               <h3 className="time">03:00 PM to 03:30 PM</h3>
-                            </div>
-                            <a className="theme-btn btn-circle mt-20" href="#register-now">Register Now</a>
-                        </div>
-                    </div>
-                    
-                    <div className="col-lg-4 col-sm-6">
-                        <div className="pricing-item wow fadeInUp delay-0-2s">
-                            <div className="pricing-header">
-                                <h5 className="pricing-title">Executive Showcase Event</h5>
-                                <span className="price">8th July - 2022</span>
-                                <h3 className="time">03:00 PM to 03:30 PM</h3>
-                            </div>
-                            <a className="theme-btn btn-circle mt-20" href="#register-now">Register Now</a>
-                        </div>
-                    </div>
-                    
-                    <div className="col-lg-4 col-sm-6">
-                        <div className="pricing-item wow fadeInUp delay-0-2s">
-                            <div className="pricing-header">
-                                <h5 className="pricing-title">Executive Showcase Event</h5>
-                                <span className="price">12th Aug - 2022</span>
-                                <h3 className="time">03:00 PM to 03:30 PM</h3>
-                            </div>
-                            <a className="theme-btn btn-circle mt-20" href="#register-now">Register Now</a>
-                        </div>
-                    </div>
-                    
+               
                     <div className="col-lg-4 col-sm-6">
                         <div className="pricing-item wow fadeInUp delay-0-2s">
                             <div className="pricing-header">
@@ -173,11 +129,7 @@ export default function Events(){
                                     </div>
                                     <div className="form-group col-sm-6">
                                     <select className="form-control" name="interest_in" required>
-                                        <option value="">---Pick up Slot*---</option>
-                                        <option value="Executive Showcase Event : 13th May - 2022">Executive Showcase Event : 13th May - 2022</option>
-                                        <option value="Executive Showcase Event : 10th June - 2022">Executive Showcase Event : 10th June - 2022</option>
-                                        <option value="Executive Showcase Event : 8th July - 2022">Executive Showcase Event : 8th July - 2022</option>
-                                        <option value="Executive Showcase Event : 12th Aug - 2022">Executive Showcase Event : 12th Aug - 2022</option>
+                                        <option value="">---Pick up Slot*---</option>                                        
                                         <option value="Executive Showcase Event : 16th Sep - 2022">Executive Showcase Event : 16th Sep - 2022</option>
                                         <option value="Executive Showcase Event : 14th Oct - 2022">Executive Showcase Event : 14th Oct - 2022</option>
                                         <option value="Executive Showcase Event : 11th Nov - 2022">Executive Showcase Event : 11th Nov - 2022</option>

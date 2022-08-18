@@ -75,7 +75,7 @@ export default function YomaExecutiveShowcase(){
                                     <div className="form-group col-sm-6">
                                     <select className="form-control" name="interest_in" required>
                                         <option value="">---Pick up Slot*---</option>
-                                        <option value="YOMA Executive Showcase Event : 12th August, 2022">YOMA Executive Showcase Event : 12th August, 2022</option>
+                                        <option value="YOMA Executive Showcase Event :16th September, 2022">YOMA Executive Showcase Event : 16th September, 2022</option>
                                     </select>                  
                                     </div>
 
