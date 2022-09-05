@@ -76,8 +76,8 @@ export default function Home() {
   return (
     <>
       <Head>
-         <title>Manpower Company | Recruitment Comapnies | YOMA</title>
-         <meta name="description" content="Looking for a manpower company or best recruitment companies in India? YOMA is your one-stop-destination for all HR needs."/>
+         <title>Yoma Business Solutions | Staffing | BYLD Group</title>
+         <meta name="description" content="Yoma Business Solutions is a one-stop HR outsourcing and corporate staffing company. It offers a skilled workforce based on the diverse requirements of third-party payroll companies."/>
       </Head>
       
  <section className="hero-section paddingb">
