@@ -183,7 +183,7 @@ const ContactUs = () => {
 
                                         <div className="col-sm-6">
                                             <div className="form-group">                                                
-                                            <input type="text" name="designation" id="designation" className="form-control" placeholder="Designation" />
+                                            <input type="text" name="designation" id="designation" className="form-control" placeholder="Designation" pattern="[a-zA-Z -]*$" title="Only alphabets and numbers are allowed" required/>
                                             </div>
                                         </div>
 
