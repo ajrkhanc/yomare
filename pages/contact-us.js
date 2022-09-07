@@ -132,7 +132,7 @@ const ContactUs = () => {
 
                                         <div className="col-sm-6">
                                             <div className="form-group">                                                
-                                            <input type="text" name="phone_number" id="phone_number" required="" maxlength="10" minlength="10" className="form-control" placeholder="Phone No.*"/>
+                                            <input type="text" name="phone_number" id="phone_number" pattern="[0-9]*" maxlength="10" minlength="10" className="form-control" placeholder="Phone No.*" required/>
                                             </div>
                                         </div>
 
