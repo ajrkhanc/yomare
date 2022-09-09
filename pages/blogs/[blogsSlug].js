@@ -301,7 +301,7 @@ export default function singleblog({ posts, posts5, cats, postfeedback }) {
                                                     <div className="widget-news-item">
                                                         <img src={getpost.ImageURL} alt={getpost.ImageAlt} />
                                                         <div className="widget-news-content">
-                                                            <h5><a href={`/${getpost.posturl}`}>{getpost.Title}</a></h5>
+                                                            <h5><a href={`/blogs/${getpost.posturl}`}>{getpost.Title}</a></h5>
                                                             <span className="date">{moment(getpost.ModifiedDate).format('DD MMMM Y')}</span>
                                                         </div>
                                                     </div>

@@ -144,7 +144,7 @@ export default function index({posts, cats}) {
                               <img src={getpost.ImageURL} alt={getpost.ImageAlt}/>
                               </div>
                               <div className="news-content">                                  
-                                  <h4><a href={getpost.posturl}>{getpost.Title}</a></h4>
+                                  <h4><a href={`/blogs/${getpost.posturl}`}>{getpost.Title}</a></h4>
                                   <ul className="post-meta-item">                                      
                                       <li>
                                           <i className="fas fa-user"></i>
@@ -183,7 +183,7 @@ export default function index({posts, cats}) {
                                     <div className="widget-news-item">
                                         <img src={getpost.ImageURL} alt={getpost.ImageAlt}/>
                                         <div className="widget-news-content">
-                                            <h5><Link href={getpost.posturl}><a>{getpost.Title}</a></Link></h5>
+                                            <h5><Link href={`/blogs/${getpost.posturl}`}><a>{getpost.Title}</a></Link></h5>
                                             <span className="date">{getpost.ModifiedDate}</span>
                                         </div>
                                     </div>
