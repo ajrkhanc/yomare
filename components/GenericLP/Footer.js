@@ -62,7 +62,7 @@ export default function Footer() {
                             <div className="footer-widget contact-widget mr-30 rmr-0">
                                 <h4 className="footer-title">CONTACT US</h4>                                
                                 <ul className="list-style-two">
-                                    <li><i className="fas fa-map-marker-alt"></i>BYLD Group: 2nd and 3rd Floor, Plot No. 48, Sector - 44, Opp. EPF Regional Office Gurugram, Haryana - 122003</li>
+                                    <li><i className="fas fa-map-marker-alt"></i>BYLD Group: <br></br>2nd and 3rd Floor, Plot No. 48, Sector - 44, Opp. EPF Regional Office Gurugram, Haryana - 122003</li>
                                     <li><i className="fas fa-envelope"></i> <a href="mailto:yoma.info@byldgroup.com">yoma.info@byldgroup.com</a></li>
                                     <li><i className="fas fa-globe"></i><a href="/">www.yomamultinational.com</a></li>
                                     <li><i className="fas fa-phone-alt"></i> <a href="callto:+91-8448188503">Associate helpline: +91 844 8188 503</a></li>
