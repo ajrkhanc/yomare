@@ -212,16 +212,7 @@ export default function index({posts, cats}) {
                             <div className="widget widget-recent-post wow fadeInUp delay-0-4s">
                                 <h3 className="widget-title">Upcoming Events</h3>
                                 <div className="widget-news-wrap">
-                                    
                                    
-                                    
-                                    <div className="widget-news-item">
-                                        <img src="/assets/img/planner.png" alt=""/>
-                                        <div className="widget-news-content">
-                                            <h5><Link  href="/events"><a>Executive Showcase Event</a></Link></h5>
-                                            <span className="date"><Link  href="/events"><a>16th Sep - 2022</a></Link></span>
-                                        </div>
-                                    </div>
                                     
                                     <div className="widget-news-item">
                                         <img src="/assets/img/planner.png" alt=""/>
