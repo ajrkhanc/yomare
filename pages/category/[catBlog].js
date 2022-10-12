@@ -3,15 +3,15 @@ import Head from 'next/head'
 import  moment from 'moment'
 
 export async function getServerSideProps(context) {    
-    const post5 = await fetch('https://yoma-admins.herokuapp.com/api/posts')
+    const post5 = await fetch('https://yoma-adminsc.herokuapp.com/api/posts')
     const posts5 = await post5.json()
 
-    const cat = await fetch('https://yoma-admins.herokuapp.com/api/categories')
+    const cat = await fetch('https://yoma-adminsc.herokuapp.com/api/categories')
     const cats = await cat.json()
 
 
     const caturl = context.params.catBlog;
-    const res = await fetch(`https://yoma-admins.herokuapp.com/api/posts/category/${caturl}`)
+    const res = await fetch(`https://yoma-adminsc.herokuapp.com/api/posts/category/${caturl}`)
     const posts = await res.json()
 
 
