@@ -83,7 +83,7 @@ export default function Header() {
                                             <ul>
                                                 <li><a href="/client-corner/#clientspeak">Client Testimonials</a></li>
                                                 <li><a href="/client-corner/#ourclientele">Our Clientele</a></li>
-                                                <li><a target="_blank" href="https://app.proanto.com/">Client Login</a></li>
+                                                <li><a target="_blank" href="https://client.yoma.co.in/">Client Login</a></li>
                                                 <li><a href="/scrap-book">Scrap Book</a></li>
                                             </ul>
                                         </li>
@@ -91,7 +91,7 @@ export default function Header() {
                                             <ul>
                                                 <li><a href="/associate-corner#jobopening">Job Openings</a></li>                                                
                                                 <li><a href="/get-job">Get a Job</a></li>
-                                                <li><a target="_blank" href="https://app.proanto.com/">Associate Login</a></li>
+                                                <li><a target="_blank" href="https://associates.yoma.co.in/">Associate Login</a></li>
                                             </ul>
                                         </li>
                                         <li><a href="/become-a-partner-page">BECOME A PARTNER</a></li>                                  
