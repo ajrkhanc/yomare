@@ -23,17 +23,17 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-            <meta charset="utf-8" />
-            <meta name="description" content="" />
-            <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-            <title>Yoma Business Solutions | Staffing | BYLD Group</title>
-            <link rel="icon" href="/favicon.png" />
-            <meta name="google-site-verification" content="NLt2fLY-Zv4a3CTFZkpB45Mag6Muyi-aKAfBhzjAGKU" />
+          <meta charset="utf-8" />
+          <meta name="description" content="" />
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+          <title>Yoma Business Solutions | Staffing | BYLD Group</title>
+          <link rel="icon" href="/favicon.png" />
+          <meta name="google-site-verification" content="NLt2fLY-Zv4a3CTFZkpB45Mag6Muyi-aKAfBhzjAGKU" />
 
-            {/* Global site tag (gtag.js) - Google Analytics */}
-            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-29994810-1"></script>
-            <script
+          {/* Global site tag (gtag.js) - Google Analytics */}
+          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-29994810-1"></script>
+          <script
             dangerouslySetInnerHTML={{
               __html: `
               window.dataLayer = window.dataLayer || [];
@@ -45,9 +45,22 @@ class MyDocument extends Document {
             }}
           />
 
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+              window.__lo_site_id = 314176;
+              (function() {
+              var wa = document.createElement('script'); wa.type = 'text/javascript'; wa.async = true;
+              wa.src = 'https://d10lpsik1i8c69.cloudfront.net/w.js';
+              var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(wa, s);
+              })();
+          `,
+            }}
+          />
+
           {/* Global site tag (gtag.js) - Google Ads: 369687005 */}
           <script async src="https://www.googletagmanager.com/gtag/js?id=AW-369687005"></script>
-            <script
+          <script
             dangerouslySetInnerHTML={{
               __html: `
               window.dataLayer = window.dataLayer || [];
@@ -61,7 +74,7 @@ class MyDocument extends Document {
 
           <script type="text/javascript" src="https://web-in21.mxradon.com/t/Tracker.js"></script>
           <script type="text/javascript">
-                pidTracker('53539');
+            pidTracker('53539');
           </script>
           {/* LeadSquared Tracking Code End */}
 
@@ -80,47 +93,47 @@ class MyDocument extends Document {
           />
 
 
-            <link rel="shortcut icon" href="/assets/img/favicon.png" type="image/x-icon"/>
-          
-            <link rel="stylesheet" href="/assets/css/font-awesome-5.9.0.css"/>
-           
-            <link rel="stylesheet" href="/assets/css/bootstrap.min.css"/>
-            
-            <link rel="stylesheet" href="/assets/css/magnific-popup.css"/>
-           
-            <link rel="stylesheet" href="/assets/css/flaticon.css"/>
-           
-            <link rel="stylesheet" href="/assets/css/animate.css"/>
-            
-            <link rel="stylesheet" href="/assets/css/slick.css"/>
-            
-            <link rel="stylesheet" href="/assets/css/style.css"/>
-            <link rel="stylesheet" href="/assets/css/globals.css"/>
-            
-            <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"/>
-            <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"/>
-            <script
+          <link rel="shortcut icon" href="/assets/img/favicon.png" type="image/x-icon" />
+
+          <link rel="stylesheet" href="/assets/css/font-awesome-5.9.0.css" />
+
+          <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+
+          <link rel="stylesheet" href="/assets/css/magnific-popup.css" />
+
+          <link rel="stylesheet" href="/assets/css/flaticon.css" />
+
+          <link rel="stylesheet" href="/assets/css/animate.css" />
+
+          <link rel="stylesheet" href="/assets/css/slick.css" />
+
+          <link rel="stylesheet" href="/assets/css/style.css" />
+          <link rel="stylesheet" href="/assets/css/globals.css" />
+
+          <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
+          <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
+          <script
             dangerouslySetInnerHTML={{
               __html: `
               var chatbot_id=12464;!function(){var t,e,a=document,s="smatbot-chatbot";a.getElementById(s)||(t=a.createElement("script"),t.id=s,t.type="text/javascript",t.src="https://smatbot.s3.amazonaws.com/files/smatbot_plugin.js.gz",e=a.getElementsByTagName("script")[0],e.parentNode.insertBefore(t,e))}();
           `,
             }}
           />
-         <script src="https://cdnjs.cloudflare.com/ajax/libs/fingerprintjs2/1.5.1/fingerprint2.min.js"></script>
-      
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/fingerprintjs2/1.5.1/fingerprint2.min.js"></script>
+
         </Head>
         <body>
           <Main />
           <NextScript />
-           <script src="/assets/js/jquery-3.6.0.min.js"></script>   
-            <script src="/assets/js/bootstrap.min.js"></script>        
-            <script src="/assets/js/appear.min.js"></script>        
-            <script src="/assets/js/slick.min.js"></script>
-            <script src="/assets/js/jquery.magnific-popup.min.js"></script>            
-            <script src="/assets/js/isotope.pkgd.min.js"></script>            
-            <script src="/assets/js/wow.js"></script>        
-            <script src="/assets/js/script.js"></script>
-            
+          <script src="/assets/js/jquery-3.6.0.min.js"></script>
+          <script src="/assets/js/bootstrap.min.js"></script>
+          <script src="/assets/js/appear.min.js"></script>
+          <script src="/assets/js/slick.min.js"></script>
+          <script src="/assets/js/jquery.magnific-popup.min.js"></script>
+          <script src="/assets/js/isotope.pkgd.min.js"></script>
+          <script src="/assets/js/wow.js"></script>
+          <script src="/assets/js/script.js"></script>
+
         </body>
       </Html>
     )
