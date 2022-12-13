@@ -72,7 +72,7 @@ export default function GenericLP(){
                                     </div>
                                     <div className="col-sm-6">
                                             <div className="form-group">                                                
-                                            <input type="text" name="leadsquared_JobTitle" id="leadsquared_JobTitle" className="form-control" placeholder="Designation" pattern="[a-zA-Z -]*$" title="Only alphabets are allowed" required/>
+                                            <input type="text" name="leadsquared_JobTitle" id="leadsquared_JobTitle" className="form-control" placeholder="Designation*" pattern="[a-zA-Z -]*$" title="Only alphabets are allowed" required/>
                                             </div>
                                         </div>
                                         <div className="form-group col-sm-12">                                   
@@ -81,8 +81,7 @@ export default function GenericLP(){
                                     <div className="form-group col-sm-12">
                                     <select className="form-control" name="interest_in" required>
                                        <option value="">Interested In*</option>
-                                       <option value="Interested in knowing more">Interested in knowing more</option>
-                                       <option value="Manpower services">Manpower services</option>                                       
+                                       <option value="Interested in knowing more">Interested in knowing more</option>                                       
                                        <option value="Temporary staffing">Temporary staffing</option>
                                        <option value="Industrial manpower">Industrial manpower</option>
                                        <option value="Staff augmentation">Staff augmentation</option>
