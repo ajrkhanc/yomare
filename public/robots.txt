@@ -1,3 +1,4 @@
 User-agent: *
-Disallow: /wp-admin/
-Allow: http://yomamultinational.com/sitemap.xml
+Allow: /
+
+Sitemap: https://www.yomamultinational.com/sitemap.xml
