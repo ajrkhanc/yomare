@@ -84,8 +84,9 @@ export default function GenericLP() {
                     <div className="row align-items-center">
                         <div className="col-lg-7">
                             <div className="hero-content text-white rmb-65">
-                                <h2 className="wow fadeInUp delay-0-4s mt-20">Are you looking for Fast and Flexible staffing or job options? <span className="gericcolor">YOMA’s Temporary Staffing Solutions</span> is what you need.</h2>
-                                <h2 className="wow fadeInUp delay-0-4s mt-20"></h2>
+                                <h2 className="wow fadeInUp delay-0-4s mt-20 fontt30">Are you looking for Fast and Flexible staffing or job options?</h2>
+                                <br></br>
+                                <h2 className="wow fadeInUp delay-0-4s mt-20 fontt30"><span className="gericcolor">YOMA’s Temporary Staffing Solutions</span> is what you need.</h2>
                             </div>
                         </div>
                         <div className="col-lg-5">
