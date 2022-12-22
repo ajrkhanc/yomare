@@ -1,16 +1,61 @@
 import Link from "next/link"
 import Head from "next/head"
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import { useState, useEffect } from "react";
 
-export default function GenericLP() {
+export default function GenericLP(State) {
 
+    const [image, setImage] = useState(null);
+    const [image2, setImage2] = useState(null);
+    const [random1, randomIn1] = useState(null);
+    const [random2, randomIn2] = useState(null);
+    const [stateData, setStates] = useState(null)
+    const [createObjectURL, setCreateObjectURL] = useState(null);
+    const [citiesData, setCities] = useState(null);
+    const [permanentCitiesData, setPermanentCities] = useState(null);
+
+    useEffect(() => {
+        setStates(State)
+    }, [State])
+
+    const uploadToClient = (event) => {
+        if (event.target.files && event.target.files[0]) {
+            const i = event.target.files[0];
+
+            setImage(i);
+            randomIn1(Math.floor((Math.random() * 2000) + 1))
+            setCreateObjectURL(URL.createObjectURL(i));
+        }
+    };
+
+    const uploadToServer = async (event) => {
+        const body = new FormData();
+        // console.log("file", image)
+        body.append("file", image);
+        body.append("randomno", random1);
+        // body.append("randomno2", random2);    
+        // body.append("file2", image2);
+
+        console.log(random1)
+        const response = await fetch("https://yomablogs-np65m.ondigitalocean.app/api/resume", {
+            method: "POST",
+            body
+        });
+    };
+
+    
+    
+    
+    
     const HiringPartner = async event => {
+        var file = image.name.replace(/\s/g, ''.random1)
         event.preventDefault()
         document.getElementById("submitbuttonform").value = "Submitting form...."
         const xhttp = new XMLHttpRequest();
         xhttp.onload = function () {
             console.log(this.responseText);
         }
+        
         xhttp.open("Post", 'https://ajrkhan.xyz/yomamultinational/wp-json/contact-form-7/v1/contact-forms/21/feedback');
         xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded;");
         xhttp.onreadystatechange = function () {
@@ -28,12 +73,14 @@ export default function GenericLP() {
                 }
             }
         };
+        
         xhttp.send("leadsquared-FirstName=" + event.target.name.value +
             "&leadsquared-EmailAddress=" + event.target.leadsquared_EmailAddress.value +
             "&leadsquared-Mobile=" + event.target.phone_number.value +
             "&leadsquared-JobTitle=" + event.target.leadsquared_JobTitle.value +
             "&leadsquared-Company=" + event.target.leadsquared_Company.value +
             "&remark=" + event.target.remark.value +
+            '&resume=' + file +
             "&leadsquared-mx_Business_Entity=" + event.target.leadsquared_mx_Business_Entity.value)
 
     }
@@ -84,8 +131,7 @@ export default function GenericLP() {
                     <div className="row align-items-center">
                         <div className="col-lg-7">
                             <div className="hero-content text-white rmb-65">
-                                <h2 className="wow fadeInUp delay-0-4s mt-20 fontt30">Are you looking for Fast & Flexible Staffing Solutions?</h2>
-                                
+                                <h2 className="wow fadeInUp delay-0-4s mt-20 fontt30">Are you looking for Fast & Flexible Staffing Solutions?</h2>                                
                                 <h2 className="wow fadeInUp delay-0-4s mt-20 fontt30"><span className="gericcolor">YOMA’s Temporary Staffing Solutions</span> is what you need.</h2>
                             </div>
                         </div>
@@ -123,9 +169,16 @@ export default function GenericLP() {
                                                 <div className="form-group col-sm-12">
                                                 <input type="email" name="leadsquared_EmailAddress" id="leadsquared_EmailAddress" className="form-control" placeholder="Email*" required />
                                                 </div>
-                                                <div className="form-group col-sm-12">
+                                                <div className="form-group col-sm-6">
                                                 <input type="text" name="remark" id="remark" className="form-control" placeholder="What sort of hiring you are looking for" required />
                                                 </div>
+
+                                                <div className="col-sm-6">
+                                                <div className="form-group">
+                                                    <label for="ResumeFile">Resume File</label>
+                                                    <input type="file" id="ResumeFile" name="ResumeFile" onChange={uploadToClient} required />
+                                                </div>
+                                            </div>
 
                                                 <div className="form-group d-none col-sm-12">
                                                     <input type="text" name="leadsquared_mx_Business_Entity" id="leadsquared_mx_Business_Entity" value="YOMA Business Solutions" className="form-control" required />

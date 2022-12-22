@@ -135,7 +135,8 @@ export default function PrivatePage(State, currentState) {
             '&VehicleRequirement=' + VehicleRequirement +
             '&SmartPhone=' + SmartPhone +
             '&NativeLanguage=' + NativeLanguage +
-            '&file=' + file + '&random=' + random1);
+            '&file=' + file + 
+            '&random=' + random1);
 
         xhr.onreadystatechange = function () {
             if (xhr.readyState == 4 && xhr.status == 200) {

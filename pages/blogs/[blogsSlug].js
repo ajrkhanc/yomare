@@ -73,6 +73,7 @@ const submitFeedback = async (event) => {
         console.log('error');
     }
 };
+
 export default function singleblog({ posts, posts5, cats, postfeedback }) {
 
     const registerUser = async event => {
