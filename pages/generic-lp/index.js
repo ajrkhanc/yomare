@@ -93,7 +93,7 @@ export default function GenericLP() {
 
                                 <Tabs className="tbform">
                                     <div className="section-title">
-                                        <h2 className="mb-0 fmmmm">For all Sorts of Hiring or Job Queries</h2>
+                                        <h2 className="mb-0 fmmmm">For all Sorts of Hiring or Job Needs</h2>
                                         
                                     </div>                                    
                                     <TabList className="tabbtn">
@@ -109,7 +109,7 @@ export default function GenericLP() {
                                                     
                                                 </div>
                                                 <div className="form-group col-sm-6">
-                                                <input type="text" id="name" name="name" className="form-control" placeholder="Your Name*" required />
+                                                <input type="text" id="name" name="name" className="form-control" placeholder="Name*" required />
                                                     
                                                 </div>
                                                 <div className="form-group col-sm-6">
@@ -117,10 +117,10 @@ export default function GenericLP() {
                                                 
                                                 </div>
                                                 <div className="col-sm-6">                                                    
-                                                    <input type="text" name="phone_number" id="phone_number" pattern="[0-9]*" maxlength="10" minlength="10" className="form-control" placeholder="Phone No.*" required />
+                                                    <input type="text" name="phone_number" id="phone_number" pattern="[0-9]*" maxlength="10" minlength="10" className="form-control" placeholder="Mobile No.*" required />
                                                 </div>
                                                 <div className="form-group col-sm-12">
-                                                <input type="email" name="leadsquared_EmailAddress" id="leadsquared_EmailAddress" className="form-control" placeholder="Your Email*" required />
+                                                <input type="email" name="leadsquared_EmailAddress" id="leadsquared_EmailAddress" className="form-control" placeholder="Email*" required />
                                                 </div>
                                                 <div className="form-group col-sm-12">
                                                 <input type="text" name="remark" id="remark" className="form-control" placeholder="What sort of hiring you are looking for" required />
@@ -132,7 +132,7 @@ export default function GenericLP() {
 
                                                 <div className="col-sm-12">
                                                     <div className="form-group mb-0">
-                                                        <input id="submitbuttonform" type="submit" className="theme-btn btnwidth" value="Send Message" />
+                                                        <input id="submitbuttonform" type="submit" className="theme-btn btnwidthc" value="Send Message" />
                                                     </div>
                                                     <div className="clearfix"></div>
                                                     <p id="showlabel" style={{ display: "none" }}></p>
@@ -147,7 +147,7 @@ export default function GenericLP() {
                                                 <input type="text" name="leadsquared_Company" id="leadsquared_Company" className="form-control" placeholder="Current or last Company*" required />                                                    
                                                 </div>
                                                 <div className="form-group col-sm-6">
-                                                <input type="text" id="name" name="name" className="form-control" placeholder="Your Name*" required />
+                                                <input type="text" id="name" name="name" className="form-control" placeholder="Name*" required />
                                                     
                                                 </div>
                                                 <div className="form-group col-sm-6">
@@ -155,10 +155,10 @@ export default function GenericLP() {
                                                 
                                                 </div>
                                                 <div className="col-sm-6">                                                    
-                                                    <input type="text" name="phone_number" id="phone_number" pattern="[0-9]*" maxlength="10" minlength="10" className="form-control" placeholder="Phone No.*" required />
+                                                    <input type="text" name="phone_number" id="phone_number" pattern="[0-9]*" maxlength="10" minlength="10" className="form-control" placeholder="Mobile No.*" required />
                                                 </div>
                                                 <div className="form-group col-sm-12">
-                                                <input type="email" name="leadsquared_EmailAddress" id="leadsquared_EmailAddress" className="form-control" placeholder="Your Email*" required />
+                                                <input type="email" name="leadsquared_EmailAddress" id="leadsquared_EmailAddress" className="form-control" placeholder="Email*" required />
                                                 </div>
                                                 <div className="form-group col-sm-12">
                                                 <input type="text" name="remark" id="remark" className="form-control" placeholder="Any preferred job location" required />
@@ -170,7 +170,7 @@ export default function GenericLP() {
 
                                                 <div className="col-sm-12">
                                                     <div className="form-group mb-0">
-                                                        <input id="submitbuttonform" type="submit" className="theme-btn btnwidth" value="Send Message" />
+                                                        <input id="submitbuttonform" type="submit" className="theme-btn btnwidthc" value="Send Message" />
                                                     </div>
                                                     <div className="clearfix"></div>
                                                     <p id="showlabel" style={{ display: "none" }}></p>
