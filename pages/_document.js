@@ -133,7 +133,6 @@ class MyDocument extends Document {
           <script src="/assets/js/isotope.pkgd.min.js"></script>
           <script src="/assets/js/wow.js"></script>
           <script src="/assets/js/script.js"></script>
-
         </body>
       </Html>
     )
