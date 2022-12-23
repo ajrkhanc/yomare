@@ -221,4 +221,11 @@
     .imgw60{width: 60px;}
 
 
+    .ajcfile #ResumeFile{
+      padding: 2px 2px !important;
+  }
 
+  .ajcfile label{
+    top: 2px !important;
+    right: 0px !important;
+}

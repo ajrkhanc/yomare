@@ -28,6 +28,16 @@ export default function GenericLP(State) {
         }
     };
 
+    const uploadToClient2 = (event) => {
+        if (event.target.files && event.target.files[0]) {
+            const i = event.target.files[0];
+
+            setImage2(i);
+            randomIn2(Math.floor((Math.random() * 2000) + 1))
+            setCreateObjectURL(URL.createObjectURL(i));
+        }
+    };
+
     const uploadToServer = async (event) => {
         const body = new FormData();
         // console.log("file", image)
@@ -48,7 +58,10 @@ export default function GenericLP(State) {
     
     
     const HiringPartner = async event => {
-        var file = image.name.replace(/\s/g, ''.random1)
+        var imgurl ="https://yomablogs-np65m.ondigitalocean.app/uploads/proanto/resume/";
+        var file = image.name.replace(/\s/g, '')
+        var filenew = random1 +'_'+ file;
+        var completeurl = imgurl + filenew;
         event.preventDefault()
         document.getElementById("submitbuttonform").value = "Submitting form...."
         const xhttp = new XMLHttpRequest();
@@ -80,7 +93,7 @@ export default function GenericLP(State) {
             "&leadsquared-JobTitle=" + event.target.leadsquared_JobTitle.value +
             "&leadsquared-Company=" + event.target.leadsquared_Company.value +
             "&remark=" + event.target.remark.value +
-            '&resume=' + file +
+            '&resume=' + completeurl +
             "&leadsquared-mx_Business_Entity=" + event.target.leadsquared_mx_Business_Entity.value)
 
     }
@@ -149,7 +162,7 @@ export default function GenericLP(State) {
                                     </TabList>
 
                                     <TabPanel>
-                                        <form id="contactForm" onSubmit={HiringPartner} className="gnform">
+                                        <form id="contactForm" onSubmit={HiringPartner} className="gnform comment-form">
                                             <div className="row">
                                                 <div className="form-group col-sm-6">
                                                 <input type="text" name="leadsquared_Company" id="leadsquared_Company" className="form-control" placeholder="Company Name*" required />
@@ -166,14 +179,14 @@ export default function GenericLP(State) {
                                                 <div className="col-sm-6">                                                    
                                                     <input type="text" name="phone_number" id="phone_number" pattern="[0-9]*" maxlength="10" minlength="10" className="form-control" placeholder="Mobile No.*" required />
                                                 </div>
-                                                <div className="form-group col-sm-12">
+                                                <div className="form-group col-sm-6">
                                                 <input type="email" name="leadsquared_EmailAddress" id="leadsquared_EmailAddress" className="form-control" placeholder="Email*" required />
                                                 </div>
                                                 <div className="form-group col-sm-6">
                                                 <input type="text" name="remark" id="remark" className="form-control" placeholder="What sort of hiring you are looking for" required />
                                                 </div>
 
-                                                <div className="col-sm-6">
+                                                <div className="col-sm-12 ajcfile">
                                                 <div className="form-group">
                                                     <label for="ResumeFile">Resume File</label>
                                                     <input type="file" id="ResumeFile" name="ResumeFile" onChange={uploadToClient} required />
@@ -186,7 +199,7 @@ export default function GenericLP(State) {
 
                                                 <div className="col-sm-12">
                                                     <div className="form-group mb-0">
-                                                        <input id="submitbuttonform" type="submit" className="theme-btn btnwidthc" value="Send Message" />
+                                                        <input id="submitbuttonform" type="submit" className="theme-btn btnwidthc" value="Send Message" onClick={uploadToServer}/>
                                                     </div>
                                                     <div className="clearfix"></div>
                                                     <p id="showlabel" style={{ display: "none" }}></p>
