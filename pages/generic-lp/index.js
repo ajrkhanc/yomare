@@ -53,22 +53,18 @@ export default function GenericLP(State) {
         });
     };
 
-    
-    
-    
-    
-    const HiringPartner = async event => {
-        var imgurl ="https://yomablogs-np65m.ondigitalocean.app/uploads/proanto/resume/";
-        var file = image.name.replace(/\s/g, '')
-        var filenew = random1 +'_'+ file;
-        var completeurl = imgurl + filenew;
+
+
+
+
+    const HiringPartner = async event => {        
         event.preventDefault()
         document.getElementById("submitbuttonform").value = "Submitting form...."
         const xhttp = new XMLHttpRequest();
         xhttp.onload = function () {
             console.log(this.responseText);
         }
-        
+
         xhttp.open("Post", 'https://ajrkhan.xyz/yomamultinational/wp-json/contact-form-7/v1/contact-forms/21/feedback');
         xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded;");
         xhttp.onreadystatechange = function () {
@@ -86,20 +82,24 @@ export default function GenericLP(State) {
                 }
             }
         };
-        
+
         xhttp.send("leadsquared-FirstName=" + event.target.name.value +
             "&leadsquared-EmailAddress=" + event.target.leadsquared_EmailAddress.value +
             "&leadsquared-Mobile=" + event.target.phone_number.value +
             "&leadsquared-JobTitle=" + event.target.leadsquared_JobTitle.value +
             "&leadsquared-Company=" + event.target.leadsquared_Company.value +
-            "&remark=" + event.target.remark.value +
-            '&resume=' + completeurl +
+            "&remark=" + event.target.remark.value +            
             "&leadsquared-mx_Business_Entity=" + event.target.leadsquared_mx_Business_Entity.value)
 
     }
 
 
     const Jobseeker = async event => {
+        var imgurl = "https://yomablogs-np65m.ondigitalocean.app/uploads/proanto/resume/";
+        var file = image.name.replace(/\s/g, '')
+        var filenew = random1 + '_' + file;
+        var completeurl = imgurl + filenew;
+
         event.preventDefault()
         document.getElementById("submitbuttonform").value = "Submitting form...."
         const xhttp = new XMLHttpRequest();
@@ -129,6 +129,7 @@ export default function GenericLP(State) {
             "&qualification=" + event.target.qualification.value +
             "&leadsquared-Company=" + event.target.leadsquared_Company.value +
             "&remark=" + event.target.remark.value +
+            '&resume=' + completeurl +
             "&leadsquared-mx_Business_Entity=" + event.target.leadsquared_mx_Business_Entity.value)
 
     }
@@ -144,7 +145,7 @@ export default function GenericLP(State) {
                     <div className="row align-items-center">
                         <div className="col-lg-7">
                             <div className="hero-content text-white rmb-65">
-                                <h2 className="wow fadeInUp delay-0-4s mt-20 fontt30">Are you looking for Fast & Flexible Staffing Solutions?</h2>                                
+                                <h2 className="wow fadeInUp delay-0-4s mt-20 fontt30">Are you looking for Fast & Flexible Staffing Solutions?</h2>
                                 <h2 className="wow fadeInUp delay-0-4s mt-20 fontt30"><span className="gericcolor">YOMA’s Temporary Staffing Solutions</span> is what you need.</h2>
                             </div>
                         </div>
@@ -154,44 +155,37 @@ export default function GenericLP(State) {
                                 <Tabs className="tbform">
                                     <div className="section-title">
                                         <h2 className="mb-0 fmmmm">For all Sorts of Hiring or Job Needs</h2>
-                                        
-                                    </div>                                    
+
+                                    </div>
                                     <TabList className="tabbtn">
-                                        <Tab><input name="tt" id="cca" type="radio"/><label for="cca" className="mlefc">Employer</label></Tab>
-                                        <Tab><input name="tt" id="ccb" type="radio"/> <label for="ccb">Job Seeker</label></Tab>
+                                        <Tab><input name="tt" id="cca" type="radio" /><label for="cca" className="mlefc">Employer</label></Tab>
+                                        <Tab><input name="tt" id="ccb" type="radio" /> <label for="ccb">Job Seeker</label></Tab>
                                     </TabList>
 
                                     <TabPanel>
-                                        <form id="contactForm" onSubmit={HiringPartner} className="gnform comment-form">
+                                        <form id="contactForm" onSubmit={HiringPartner} className="gnform">
                                             <div className="row">
                                                 <div className="form-group col-sm-6">
-                                                <input type="text" name="leadsquared_Company" id="leadsquared_Company" className="form-control" placeholder="Company Name*" required />
-                                                    
+                                                    <input type="text" name="leadsquared_Company" id="leadsquared_Company" className="form-control" placeholder="Company Name*" required />
+
                                                 </div>
                                                 <div className="form-group col-sm-6">
-                                                <input type="text" id="name" name="name" className="form-control" placeholder="Name*" required />
-                                                    
+                                                    <input type="text" id="name" name="name" className="form-control" placeholder="Name*" required />
+
                                                 </div>
                                                 <div className="form-group col-sm-6">
-                                                <input type="text" name="leadsquared_JobTitle" id="leadsquared_JobTitle" className="form-control" placeholder="Designation*" pattern="[a-zA-Z -]*$" title="Only alphabets are allowed" required />
-                                                
+                                                    <input type="text" name="leadsquared_JobTitle" id="leadsquared_JobTitle" className="form-control" placeholder="Designation*" pattern="[a-zA-Z -]*$" title="Only alphabets are allowed" required />
+
                                                 </div>
-                                                <div className="col-sm-6">                                                    
+                                                <div className="col-sm-6">
                                                     <input type="text" name="phone_number" id="phone_number" pattern="[0-9]*" maxlength="10" minlength="10" className="form-control" placeholder="Mobile No.*" required />
                                                 </div>
-                                                <div className="form-group col-sm-6">
-                                                <input type="email" name="leadsquared_EmailAddress" id="leadsquared_EmailAddress" className="form-control" placeholder="Email*" required />
+                                                <div className="form-group col-sm-12">
+                                                    <input type="email" name="leadsquared_EmailAddress" id="leadsquared_EmailAddress" className="form-control" placeholder="Email*" required />
                                                 </div>
-                                                <div className="form-group col-sm-6">
-                                                <input type="text" name="remark" id="remark" className="form-control" placeholder="What sort of hiring you are looking for" required />
-                                                </div>
-
-                                                <div className="col-sm-12 ajcfile">
-                                                <div className="form-group">
-                                                    <label for="ResumeFile">Resume File</label>
-                                                    <input type="file" id="ResumeFile" name="ResumeFile" onChange={uploadToClient} required />
-                                                </div>
-                                            </div>
+                                                <div className="form-group col-sm-12">
+                                                    <input type="text" name="remark" id="remark" className="form-control" placeholder="What sort of hiring you are looking for" required />
+                                                </div>                                                
 
                                                 <div className="form-group d-none col-sm-12">
                                                     <input type="text" name="leadsquared_mx_Business_Entity" id="leadsquared_mx_Business_Entity" value="YOMA Business Solutions" className="form-control" required />
@@ -199,7 +193,7 @@ export default function GenericLP(State) {
 
                                                 <div className="col-sm-12">
                                                     <div className="form-group mb-0">
-                                                        <input id="submitbuttonform" type="submit" className="theme-btn btnwidthc" value="Send Message" onClick={uploadToServer}/>
+                                                        <input id="submitbuttonform" type="submit" className="theme-btn btnwidthc" value="Send Message"/>
                                                     </div>
                                                     <div className="clearfix"></div>
                                                     <p id="showlabel" style={{ display: "none" }}></p>
@@ -208,27 +202,34 @@ export default function GenericLP(State) {
                                         </form>
                                     </TabPanel>
                                     <TabPanel>
-                                    <form id="contactForm" onSubmit={Jobseeker} className="gnform">
+                                        <form id="contactForm" onSubmit={Jobseeker} className="gnform comment-form">
                                             <div className="row">
                                                 <div className="form-group col-sm-6">
-                                                <input type="text" name="leadsquared_Company" id="leadsquared_Company" className="form-control" placeholder="Current or last Company*" required />                                                    
+                                                    <input type="text" name="leadsquared_Company" id="leadsquared_Company" className="form-control" placeholder="Current or last Company*" required />
                                                 </div>
                                                 <div className="form-group col-sm-6">
-                                                <input type="text" id="name" name="name" className="form-control" placeholder="Name*" required />
-                                                    
+                                                    <input type="text" id="name" name="name" className="form-control" placeholder="Name*" required />
+
                                                 </div>
                                                 <div className="form-group col-sm-6">
-                                                <input type="text" name="qualification" id="qualification" className="form-control" placeholder="Qualification*" pattern="[a-zA-Z -]*$" title="Only alphabets are allowed" required />
-                                                
+                                                    <input type="text" name="qualification" id="qualification" className="form-control" placeholder="Qualification*" pattern="[a-zA-Z -]*$" title="Only alphabets are allowed" required />
+
                                                 </div>
-                                                <div className="col-sm-6">                                                    
+                                                <div className="col-sm-6">
                                                     <input type="text" name="phone_number" id="phone_number" pattern="[0-9]*" maxlength="10" minlength="10" className="form-control" placeholder="Mobile No.*" required />
                                                 </div>
-                                                <div className="form-group col-sm-12">
-                                                <input type="email" name="leadsquared_EmailAddress" id="leadsquared_EmailAddress" className="form-control" placeholder="Email*" required />
+                                                <div className="form-group col-sm-6">
+                                                    <input type="email" name="leadsquared_EmailAddress" id="leadsquared_EmailAddress" className="form-control" placeholder="Email*" required />
                                                 </div>
-                                                <div className="form-group col-sm-12">
-                                                <input type="text" name="remark" id="remark" className="form-control" placeholder="Any preferred job location" required />
+                                                <div className="form-group col-sm-6">
+                                                    <input type="text" name="remark" id="remark" className="form-control" placeholder="Any preferred job location" required />
+                                                </div>
+
+                                                <div className="col-sm-12 ajcfile">
+                                                    <div className="form-group">
+                                                        <label for="ResumeFile">Resume File (Optional)</label>
+                                                        <input type="file" id="ResumeFile" name="ResumeFile" onChange={uploadToClient} required />
+                                                    </div>
                                                 </div>
 
                                                 <div className="form-group d-none col-sm-12">
@@ -237,7 +238,7 @@ export default function GenericLP(State) {
 
                                                 <div className="col-sm-12">
                                                     <div className="form-group mb-0">
-                                                        <input id="submitbuttonform" type="submit" className="theme-btn btnwidthc" value="Send Message" />
+                                                        <input id="submitbuttonform" type="submit" className="theme-btn btnwidthc" value="Send Message"  onClick={uploadToServer} />
                                                     </div>
                                                     <div className="clearfix"></div>
                                                     <p id="showlabel" style={{ display: "none" }}></p>
