@@ -229,3 +229,7 @@
     top: 2px !important;
     right: 0px !important;
 }
+
+.ajcfile .form-group{
+  margin-bottom: 0px !important;
+}
