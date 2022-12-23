@@ -39,13 +39,10 @@ export default function GenericLP(State) {
     };
 
     const uploadToServer = async (event) => {
-        const body = new FormData();
-        // console.log("file", image)
+        const body = new FormData();      
         body.append("file", image);
         body.append("randomno", random1);
-        // body.append("randomno2", random2);    
-        // body.append("file2", image2);
-
+      
         console.log(random1)
         const response = await fetch("https://yomablogs-np65m.ondigitalocean.app/api/resume", {
             method: "POST",
@@ -57,7 +54,7 @@ export default function GenericLP(State) {
 
 
 
-    const HiringPartner = async event => {        
+    const HiringPartner = async event => {
         event.preventDefault()
         document.getElementById("submitbuttonform").value = "Submitting form...."
         const xhttp = new XMLHttpRequest();
@@ -228,7 +225,7 @@ export default function GenericLP(State) {
                                                 <div className="col-sm-12 ajcfile">
                                                     <div className="form-group">
                                                         <label for="ResumeFile">Resume File (Optional)</label>
-                                                        <input type="file" id="ResumeFile" name="ResumeFile" onChange={uploadToClient} required />
+                                                        <input type="file" id="ResumeFile" name="ResumeFile" onChange={uploadToClient} required/>
                                                     </div>
                                                 </div>
 
