@@ -246,6 +246,7 @@ export default function GenericLP(State) {
                                                         <option value="">Select Cities</option>
                                                         <option value="any">Any</option>
                                                         <option value="Delhi NCR">Delhi NCR</option>
+                                                        <option value="Noida">Noida</option>
                                                         <option value="Faridabad">Faridabad</option>
                                                         <option value="Gurugram">Gurugram</option>
                                                         <option value="Andhra Pradesh">Andhra Pradesh</option>
