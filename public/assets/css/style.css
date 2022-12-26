@@ -71,3 +71,8 @@
     color: #2e68b0 !important;
 }
 
+.gnform select{
+    padding: 8px 10px !important;
+    border-radius: 5px !important;
+    border: 2px solid #2e68b0 !important;
+}
