@@ -146,7 +146,7 @@ export default function GenericLP(State) {
                                 <h2 className="wow fadeInUp delay-0-4s mt-20 fontt30"><span className="gericcolor">YOMA’s Temporary Staffing Solutions</span> is what you need.</h2>
                             </div>
                         </div>
-                        <div className="col-lg-5">
+                        {/* <div className="col-lg-5">
                             <div className="hero-section-form bg-white p-20 wow fadeInRight delay-0-4s">
 
                                 <Tabs className="tbform">
@@ -245,7 +245,84 @@ export default function GenericLP(State) {
                                     </TabPanel>
                                 </Tabs>
                             </div>
-                        </div>
+                        </div> */}
+                        <div className="col-lg-5">
+                        <div className="hero-section-form bg-white p-20 wow fadeInRight delay-0-4s">
+                           <div className="section-title">
+                               <h2 className="mb-0">Business Query</h2>
+                           </div>
+                            <p>Looking for quicker assistance? Fill in your details and get a call back within 24 working hours.</p>
+                           <form id="contactForm">
+                                <div className="row">
+                                    <div className="form-group col-sm-6">                                   
+                                        <input type="text" id="name" name="name" className="form-control" placeholder="Your Name*" required/>
+                                    </div>
+                                    <div className="form-group col-sm-6">                                   
+                                    <input type="email" name="leadsquared_EmailAddress" id="leadsquared_EmailAddress" className="form-control" placeholder="Your Email*" required />
+                                    </div>
+                                    <div className="form-group col-sm-6">                                   
+                                    <input type="text" name="phone_number" id="phone_number" required="" maxlength="10" minlength="10" className="form-control" placeholder="Phone No.*"/>
+                                    </div>
+                                    <div className="col-sm-6">
+                                            <div className="form-group">                                                
+                                            <input type="text" name="leadsquared_JobTitle" id="leadsquared_JobTitle" className="form-control" placeholder="Designation" />
+                                            </div>
+                                        </div>
+                                        <div className="form-group col-sm-12">                                   
+                                    <input type="text" name="leadsquared_Company" id="leadsquared_Company" className="form-control" placeholder="Company Name*" required />
+                                    </div>
+                                    <div className="form-group col-sm-6">
+                                    <select className="form-control" name="interest_in" required>
+                                       <option value="">Interested In*</option>
+                                       <option value="Interested in knowing more">Interested in knowing more</option>
+                                       <option value="Manpower services">Manpower services</option>
+                                       <option value="Looking for job">Looking for job</option>
+                                       <option value="Temporary staffing">Temporary staffing</option>
+                                       <option value="Industrial manpower">Industrial manpower</option>
+                                       <option value="Staff augmentation">Staff augmentation</option>
+                                       <option value="Managed services">Managed services</option>
+                                       <option value="Shared resource program">Shared resource program</option>
+                                       <option value="Apprenticeship program (NAPS)">Apprenticeship program (NAPS)</option>
+                                    </select>                  
+                                    </div>
+
+                                    <div className="form-group col-sm-6">
+                                    <select className="form-control" name="referredby">
+                                        <option value="Referred By">--Referred By--</option>
+                                        <option value="Sales Representative">Sales Representative</option>
+                                        <option value="Email">Email</option>
+                                        <option value="Social Media">Social Media</option>
+                                        <option value="Google Search">Google Search</option>
+                                        <option value="Website">Website</option>
+                                        <option value="Reference">Reference</option>
+                                    </select>                 
+                                    </div>
+
+                                    <div className="col-lg-6 d-none">
+                                        <div className="form-group">
+                                            <label>Business Entity*</label>                              
+                                            <select className="form-control" name="Business_Entity">
+                                                <option value="Ken Blanchard Companies">Ken Blanchard Companies</option>
+                                            </select>
+                                            <div className="help-block with-errors"></div>
+                                        </div>
+                                        </div>                                    
+                                      
+                                    <div className="form-group d-none col-sm-12">                                   
+                                    <input type="text" name="leadsquared_mx_Business_Entity" id="leadsquared_mx_Business_Entity" value="YOMA Business Solutions" className="form-control" />
+                                    </div>
+
+                                    <div className="col-sm-12">
+                                            <div className="form-group mb-0">
+                                                <input id="submitbuttonform" type="submit" className="theme-btn btnwidth" value="Send Message"/>
+                                            </div>
+                                            <div className="clearfix"></div>
+                                            <p id="showlabel" style={{ display: "none" }}></p>
+                                        </div>
+                                </div>                                
+                            </form>
+                       </div>
+                    </div>
                     </div>
                 </div>
                 <div className="hero-line-shape">
