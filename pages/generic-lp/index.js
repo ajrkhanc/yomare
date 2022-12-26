@@ -131,6 +131,41 @@ export default function GenericLP(State) {
 
     }
 
+    const registerUser = async event => {
+        event.preventDefault()
+        document.getElementById("submitbuttonform").value = "Submitting form...."
+        const xhttp = new XMLHttpRequest();
+        xhttp.onload = function () {
+            console.log(this.responseText);
+        }
+        xhttp.open("Post", 'https://ajrkhan.xyz/yomamultinational/wp-json/contact-form-7/v1/contact-forms/13901/feedback');
+        xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded;");
+        xhttp.onreadystatechange = function () {
+            if (xhttp.readyState == 4) {
+                if (xhttp.status == 200) {
+                    document.getElementById("showlabel").innerHTML = "Thank you for submitting your details. Our subject matter experts will connect you within 24 working hours.";
+
+                    document.getElementById("showlabel").style.display = "block";
+                    window.setTimeout(function() {
+                       window.location.href = "/thank-you-lp"
+                    }, 3000);
+
+                } else {
+                    alert('There was a problem with the request.');
+                }
+            }
+        };
+        xhttp.send("leadsquared-FirstName=" + event.target.name.value +
+            "&leadsquared-EmailAddress=" + event.target.leadsquared_EmailAddress.value +
+            "&leadsquared-Mobile=" + event.target.phone_number.value +
+            "&leadsquared-JobTitle=" + event.target.leadsquared_JobTitle.value +
+            "&leadsquared-Company=" + event.target.leadsquared_Company.value +
+            "&leadsquared-mx_Showed_Interest_in=" + event.target.interest_in.value +
+            "&leadsquared-mx_Business_Entity=" + event.target.leadsquared_mx_Business_Entity.value +
+            "&referredby=" + event.target.referredby.value)
+
+    }
+
     return (
         <>
             <Head>
@@ -252,7 +287,7 @@ export default function GenericLP(State) {
                                <h2 className="mb-0">Business Query</h2>
                            </div>
                             <p>Looking for quicker assistance? Fill in your details and get a call back within 24 working hours.</p>
-                           <form id="contactForm">
+                           <form id="contactForm" onSubmit={registerUser}>
                                 <div className="row">
                                     <div className="form-group col-sm-6">                                   
                                         <input type="text" id="name" name="name" className="form-control" placeholder="Your Name*" required/>
