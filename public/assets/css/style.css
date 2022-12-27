@@ -9,14 +9,15 @@
 }
 
 .tabbtn label{
-  overflow: hidden;
+    overflow: hidden;
     background: #2e68b0;
     color: #fff;
-    padding: 5px 15px;
+    padding: 5px 10px;
     border-radius: 7px;
     cursor: pointer;
     margin: 0px 7px;
     border: 2px solid #b7b7b7;
+    width: 140px;
 }
 
 .tabbtn{
@@ -55,7 +56,7 @@
     margin: 0px !important;
 }
 .mlefc{
-    margin-right: 60px !important;
+    margin-right: 30px !important;
 }
 
 .btnwidthc {

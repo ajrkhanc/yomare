@@ -3,7 +3,16 @@ import Head from "next/head"
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { useState, useEffect } from "react";
 
+
+
+
+
+  
+
+
 export default function GenericLP(State) {
+
+
 
     const [image, setImage] = useState(null);
     const [image2, setImage2] = useState(null);
@@ -39,10 +48,10 @@ export default function GenericLP(State) {
     };
 
     const uploadToServer = async (event) => {
-        const body = new FormData();      
+        const body = new FormData();
         body.append("file", image);
         body.append("randomno", random1);
-      
+
         console.log(random1)
         const response = await fetch("https://yomablogs-np65m.ondigitalocean.app/api/resume", {
             method: "POST",
@@ -85,7 +94,7 @@ export default function GenericLP(State) {
             "&leadsquared-Mobile=" + event.target.phone_number.value +
             "&leadsquared-JobTitle=" + event.target.leadsquared_JobTitle.value +
             "&leadsquared-Company=" + event.target.leadsquared_Company.value +
-            "&remark=" + event.target.remark.value +            
+            "&remark=" + event.target.remark.value +
             "&leadsquared-mx_Business_Entity=" + event.target.leadsquared_mx_Business_Entity.value)
 
     }
@@ -111,9 +120,9 @@ export default function GenericLP(State) {
                     document.getElementById("showlabel").innerHTML = "Thank you for submitting your details. Our subject matter experts will connect you within 24 working hours.";
 
                     document.getElementById("showlabel").style.display = "block";
-                    window.setTimeout(function () {
-                        window.location.href = "/thank-you-lp"
-                    }, 3000);
+                    // window.setTimeout(function () {
+                    //     window.location.href = "/thank-you-lp"
+                    // }, 3000);
 
                 } else {
                     alert('There was a problem with the request.');
@@ -130,6 +139,16 @@ export default function GenericLP(State) {
             "&leadsquared-mx_Business_Entity=" + event.target.leadsquared_mx_Business_Entity.value)
 
     }
+
+
+    if (typeof window !== "undefined") {
+        jQuery(document).ready(function() {
+            jQuery('#submitbuttonform').click(function() {
+                            var selected = jQuery('#myMulti').val();      
+                            jQuery("#test3").val(selected);
+                            })   
+                    });
+      }
 
     return (
         <>
@@ -155,13 +174,13 @@ export default function GenericLP(State) {
 
                                     </div>
                                     <TabList className="tabbtn">
-                                        <Tab><input name="tt" id="cca" type="radio" /><label for="cca" className="mlefc">Employer</label></Tab>
-                                        <Tab><input name="tt" id="ccb" type="radio" /> <label for="ccb">Job Seeker</label></Tab>
+                                        <Tab><label for="cca" className="mlefc">Employer</label></Tab>
+                                        <Tab><label for="ccb">Job Seeker</label></Tab>
                                     </TabList>
 
                                     <TabPanel>
                                         <form id="contactForm" onSubmit={HiringPartner} className="gnform">
-                                            <div className="row">                                                
+                                            <div className="row">
 
                                                 <div className="form-group col-sm-6">
                                                     <input type="text" id="name" name="name" className="form-control" placeholder="Name*" required />
@@ -196,16 +215,16 @@ export default function GenericLP(State) {
                                                 </div>
 
                                                 <div className="form-group col-sm-12">
-                                                <select name="referredby" required>
+                                                    <select name="referredby" required>
                                                         <option value="">Referred By*</option>
                                                         <option value="Sales Representative">Sales Representative</option>
                                                         <option value="Email">Email</option>
                                                         <option value="Social Media">Social Media</option>
                                                         <option value="Google Search">Google Search</option>
                                                         <option value="Website">Website</option>
-                                                        <option value="Reference">Reference</option>                                                        
+                                                        <option value="Reference">Reference</option>
                                                     </select>
-                                                </div>                                                
+                                                </div>
 
                                                 <div className="form-group d-none col-sm-12">
                                                     <input type="text" name="leadsquared_mx_Business_Entity" id="leadsquared_mx_Business_Entity" value="YOMA Business Solutions" className="form-control" required />
@@ -213,7 +232,7 @@ export default function GenericLP(State) {
 
                                                 <div className="col-sm-12">
                                                     <div className="form-group mb-0">
-                                                        <input id="submitbuttonform" type="submit" className="theme-btn btnwidthc" value="Send Message"/>
+                                                        <input id="submitbuttonform" type="submit" className="theme-btn btnwidthc" value="Send Message" />
                                                     </div>
                                                     <div className="clearfix"></div>
                                                     <p id="showlabel" style={{ display: "none" }}></p>
@@ -241,14 +260,13 @@ export default function GenericLP(State) {
                                                 <div className="form-group col-sm-12">
                                                     <input type="email" name="leadsquared_EmailAddress" id="leadsquared_EmailAddress" className="form-control" placeholder="Email*" required />
                                                 </div>
-                                                <div className="form-group col-sm-12">                                                    
-                                                    <select name="remark" id="remark" required>
-                                                        <option value="">Select Cities</option>
+                                                <div className="form-group col-sm-12">
+                                                    <input type="text" id="test3" value="" name="remark" className="d-none"/>
+                                                    
+                                                    <select multiple="multiple" id="myMulti" name="uuu" required>
+                                                        <option>Select State</option>
                                                         <option value="any">Any</option>
                                                         <option value="Delhi NCR">Delhi NCR</option>
-                                                        <option value="Noida">Noida</option>
-                                                        <option value="Faridabad">Faridabad</option>
-                                                        <option value="Gurugram">Gurugram</option>
                                                         <option value="Andhra Pradesh">Andhra Pradesh</option>
                                                         <option value="Arunachal Pradesh">Arunachal Pradesh</option>
                                                         <option value="Assam">Assam</option>
@@ -291,7 +309,7 @@ export default function GenericLP(State) {
                                                 <div className="col-sm-12 ajcfile">
                                                     <div className="form-group">
                                                         <label for="ResumeFile">Resume File (Optional)</label>
-                                                        <input type="file" id="ResumeFile" name="ResumeFile" onChange={uploadToClient} required/>
+                                                        <input type="file" id="ResumeFile" name="ResumeFile" onChange={uploadToClient} required />
                                                     </div>
                                                 </div>
 
@@ -301,7 +319,7 @@ export default function GenericLP(State) {
 
                                                 <div className="col-sm-12">
                                                     <div className="form-group mb-0">
-                                                        <input id="submitbuttonform" type="submit" className="theme-btn btnwidthc" value="Send Message"  onClick={uploadToServer} />
+                                                        <input id="submitbuttonform" type="submit" className="theme-btn btnwidthc" value="Send Message" onClick={uploadToServer} />
                                                     </div>
                                                     <div className="clearfix"></div>
                                                     <p id="showlabel" style={{ display: "none" }}></p>
