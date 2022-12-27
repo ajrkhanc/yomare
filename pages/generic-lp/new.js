@@ -141,14 +141,14 @@ export default function GenericLP(State) {
     }
 
 
-    if (typeof window !== "undefined") {
-        jQuery(document).ready(function() {
-            jQuery('#submitbuttonform').click(function() {
-                            var selected = jQuery('#myMulti').val();      
-                            jQuery("#test3").val(selected);
-                            })   
-                    });
-      }
+    // if (typeof window !== "undefined") {
+    //     jQuery(document).ready(function() {
+    //         jQuery('#submitbuttonform').click(function() {
+    //                         var selected = jQuery('#myMulti').val();      
+    //                         jQuery("#test3").val(selected);
+    //                         })   
+    //                 });
+    //   }
 
     return (
         <>
@@ -261,10 +261,10 @@ export default function GenericLP(State) {
                                                     <input type="email" name="leadsquared_EmailAddress" id="leadsquared_EmailAddress" className="form-control" placeholder="Email*" required />
                                                 </div>
                                                 <div className="form-group col-sm-12">
-                                                    <input type="text" id="test3" value="" name="remark" className="d-none"/>
+                                                    {/* <input type="text" id="test3" value="" name="remark" className="d-none"/> */}
                                                     
-                                                    <select multiple="multiple" id="myMulti" name="uuu" required>
-                                                        <option>Select State</option>
+                                                    <select name="remark" required>
+                                                        <option value="">Select State</option>
                                                         <option value="any">Any</option>
                                                         <option value="Delhi NCR">Delhi NCR</option>
                                                         <option value="Andhra Pradesh">Andhra Pradesh</option>
