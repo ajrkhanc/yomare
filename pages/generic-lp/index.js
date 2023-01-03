@@ -3,143 +3,75 @@ import Head from "next/head"
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { useState, useEffect } from "react";
 
+
+
+
+
+  
+
+
 export default function GenericLP(State) {
 
-    // const [image, setImage] = useState(null);
-    // const [image2, setImage2] = useState(null);
-    // const [random1, randomIn1] = useState(null);
-    // const [random2, randomIn2] = useState(null);
-    // const [stateData, setStates] = useState(null)
-    // const [createObjectURL, setCreateObjectURL] = useState(null);
-    // const [citiesData, setCities] = useState(null);
-    // const [permanentCitiesData, setPermanentCities] = useState(null);
-
-    // useEffect(() => {
-    //     setStates(State)
-    // }, [State])
-
-    // const uploadToClient = (event) => {
-    //     if (event.target.files && event.target.files[0]) {
-    //         const i = event.target.files[0];
-
-    //         setImage(i);
-    //         randomIn1(Math.floor((Math.random() * 2000) + 1))
-    //         setCreateObjectURL(URL.createObjectURL(i));
-    //     }
-    // };
-
-    // const uploadToClient2 = (event) => {
-    //     if (event.target.files && event.target.files[0]) {
-    //         const i = event.target.files[0];
-
-    //         setImage2(i);
-    //         randomIn2(Math.floor((Math.random() * 2000) + 1))
-    //         setCreateObjectURL(URL.createObjectURL(i));
-    //     }
-    // };
-
-    // const uploadToServer = async (event) => {
-    //     const body = new FormData();      
-    //     body.append("file", image);
-    //     body.append("randomno", random1);
-      
-    //     console.log(random1)
-    //     const response = await fetch("https://yomablogs-np65m.ondigitalocean.app/api/resume", {
-    //         method: "POST",
-    //         body
-    //     });
-    // };
 
 
+    const [image, setImage] = useState(null);
+    const [image2, setImage2] = useState(null);
+    const [random1, randomIn1] = useState(null);
+    const [random2, randomIn2] = useState(null);
+    const [stateData, setStates] = useState(null)
+    const [createObjectURL, setCreateObjectURL] = useState(null);
+    const [citiesData, setCities] = useState(null);
+    const [permanentCitiesData, setPermanentCities] = useState(null);
+
+    useEffect(() => {
+        setStates(State)
+    }, [State])
+
+    const uploadToClient = (event) => {
+        if (event.target.files && event.target.files[0]) {
+            const i = event.target.files[0];
+
+            setImage(i);
+            randomIn1(Math.floor((Math.random() * 2000) + 1))
+            setCreateObjectURL(URL.createObjectURL(i));
+        }
+    };
+
+    const uploadToClient2 = (event) => {
+        if (event.target.files && event.target.files[0]) {
+            const i = event.target.files[0];
+
+            setImage2(i);
+            randomIn2(Math.floor((Math.random() * 2000) + 1))
+            setCreateObjectURL(URL.createObjectURL(i));
+        }
+    };
+
+    const uploadToServer = async (event) => {
+        const body = new FormData();
+        body.append("file", image);
+        body.append("randomno", random1);
+
+        console.log(random1)
+        const response = await fetch("https://yomablogs-np65m.ondigitalocean.app/api/resume", {
+            method: "POST",
+            body
+        });
+    };
 
 
 
-    // const HiringPartner = async event => {
-    //     event.preventDefault()
-    //     document.getElementById("submitbuttonform").value = "Submitting form...."
-    //     const xhttp = new XMLHttpRequest();
-    //     xhttp.onload = function () {
-    //         console.log(this.responseText);
-    //     }
-
-    //     xhttp.open("Post", 'https://ajrkhan.xyz/yomamultinational/wp-json/contact-form-7/v1/contact-forms/21/feedback');
-    //     xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded;");
-    //     xhttp.onreadystatechange = function () {
-    //         if (xhttp.readyState == 4) {
-    //             if (xhttp.status == 200) {
-    //                 document.getElementById("showlabel").innerHTML = "Thank you for submitting your details. Our subject matter experts will connect you within 24 working hours.";
-
-    //                 document.getElementById("showlabel").style.display = "block";
-    //                 window.setTimeout(function () {
-    //                     window.location.href = "/thank-you-lp"
-    //                 }, 3000);
-
-    //             } else {
-    //                 alert('There was a problem with the request.');
-    //             }
-    //         }
-    //     };
-
-    //     xhttp.send("leadsquared-FirstName=" + event.target.name.value +
-    //         "&leadsquared-EmailAddress=" + event.target.leadsquared_EmailAddress.value +
-    //         "&leadsquared-Mobile=" + event.target.phone_number.value +
-    //         "&leadsquared-JobTitle=" + event.target.leadsquared_JobTitle.value +
-    //         "&leadsquared-Company=" + event.target.leadsquared_Company.value +
-    //         "&remark=" + event.target.remark.value +            
-    //         "&leadsquared-mx_Business_Entity=" + event.target.leadsquared_mx_Business_Entity.value)
-
-    // }
 
 
-    // const Jobseeker = async event => {
-    //     var imgurl = "https://yomablogs-np65m.ondigitalocean.app/uploads/proanto/resume/";
-    //     var file = image.name.replace(/\s/g, '')
-    //     var filenew = random1 + '_' + file;
-    //     var completeurl = imgurl + filenew;
-
-    //     event.preventDefault()
-    //     document.getElementById("submitbuttonform").value = "Submitting form...."
-    //     const xhttp = new XMLHttpRequest();
-    //     xhttp.onload = function () {
-    //         console.log(this.responseText);
-    //     }
-    //     xhttp.open("Post", 'https://ajrkhan.xyz/yomamultinational/wp-json/contact-form-7/v1/contact-forms/722/feedback');
-    //     xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded;");
-    //     xhttp.onreadystatechange = function () {
-    //         if (xhttp.readyState == 4) {
-    //             if (xhttp.status == 200) {
-    //                 document.getElementById("showlabel").innerHTML = "Thank you for submitting your details. Our subject matter experts will connect you within 24 working hours.";
-
-    //                 document.getElementById("showlabel").style.display = "block";
-    //                 window.setTimeout(function () {
-    //                     window.location.href = "/thank-you-lp"
-    //                 }, 3000);
-
-    //             } else {
-    //                 alert('There was a problem with the request.');
-    //             }
-    //         }
-    //     };
-    //     xhttp.send("leadsquared-FirstName=" + event.target.name.value +
-    //         "&leadsquared-EmailAddress=" + event.target.leadsquared_EmailAddress.value +
-    //         "&leadsquared-Mobile=" + event.target.phone_number.value +
-    //         "&qualification=" + event.target.qualification.value +
-    //         "&leadsquared-Company=" + event.target.leadsquared_Company.value +
-    //         "&remark=" + event.target.remark.value +
-    //         '&resume=' + completeurl +
-    //         "&leadsquared-mx_Business_Entity=" + event.target.leadsquared_mx_Business_Entity.value)
-
-    // }
-
-
-    const registerUser = async event => {
+    const HiringPartner = async event => {
         event.preventDefault()
-        document.getElementById("submitbuttonform").value = "Submitting form...."
+        document.getElementById("submitbuttonform").value = "Submitting..."
         const xhttp = new XMLHttpRequest();
         xhttp.onload = function () {
             console.log(this.responseText);
         }
-        xhttp.open("Post", 'https://bmelectrician.com/yoma/wp-json/contact-form-7/v1/contact-forms/13901/feedback');
+
+        xhttp.open("Post", 'https://ajrkhan.xyz/yomamultinational/wp-json/contact-form-7/v1/contact-forms/21/feedback');
         xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded;");
         xhttp.onreadystatechange = function () {
             if (xhttp.readyState == 4) {
@@ -147,9 +79,51 @@ export default function GenericLP(State) {
                     document.getElementById("showlabel").innerHTML = "Thank you for submitting your details. Our subject matter experts will connect you within 24 working hours.";
 
                     document.getElementById("showlabel").style.display = "block";
-                    window.setTimeout(function() {
-                       window.location.href = "/thank-you-lp"
+                    window.setTimeout(function () {
+                        window.location.href = "/thank-you-lp"
                     }, 3000);
+
+                } else {
+                    alert('There was a problem with the request.');
+                }
+            }
+        };
+
+        xhttp.send("leadsquared-FirstName=" + event.target.name.value +
+            "&leadsquared-EmailAddress=" + event.target.leadsquared_EmailAddress.value +
+            "&leadsquared-Mobile=" + event.target.phone_number.value +
+            "&leadsquared-JobTitle=" + event.target.leadsquared_JobTitle.value +
+            "&leadsquared-Company=" + event.target.leadsquared_Company.value +
+            "&interest_in=" + event.target.interest_in.value +
+            "&referredby=" + event.target.referredby.value +
+            "&leadsquared-mx_Business_Entity=" + event.target.leadsquared_mx_Business_Entity.value)
+
+    }
+
+
+    const Jobseeker = async event => {
+        var imgurl = "https://yomablogs-np65m.ondigitalocean.app/uploads/proanto/resume/";
+        var file = image.name.replace(/\s/g, '')
+        var filenew = random1 + '_' + file;
+        var completeurl = imgurl + filenew;
+
+        event.preventDefault()
+        document.getElementById("submitbuttonform").value = "Submitting..."
+        const xhttp = new XMLHttpRequest();
+        xhttp.onload = function () {
+            console.log(this.responseText);
+        }
+        xhttp.open("Post", 'https://ajrkhan.xyz/yomamultinational/wp-json/contact-form-7/v1/contact-forms/722/feedback');
+        xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded;");
+        xhttp.onreadystatechange = function () {
+            if (xhttp.readyState == 4) {
+                if (xhttp.status == 200) {
+                    document.getElementById("showlabel").innerHTML = "Thank you for submitting your details. Our subject matter experts will connect you within 24 working hours.";
+
+                    document.getElementById("showlabel").style.display = "block";
+                    // window.setTimeout(function () {
+                    //     window.location.href = "/thank-you-lp"
+                    // }, 3000);
 
                 } else {
                     alert('There was a problem with the request.');
@@ -159,13 +133,23 @@ export default function GenericLP(State) {
         xhttp.send("leadsquared-FirstName=" + event.target.name.value +
             "&leadsquared-EmailAddress=" + event.target.leadsquared_EmailAddress.value +
             "&leadsquared-Mobile=" + event.target.phone_number.value +
-            "&leadsquared-JobTitle=" + event.target.leadsquared_JobTitle.value +
+            "&qualification=" + event.target.qualification.value +
             "&leadsquared-Company=" + event.target.leadsquared_Company.value +
-            "&leadsquared-mx_Showed_Interest_in=" + event.target.interest_in.value +
-            "&leadsquared-mx_Business_Entity=" + event.target.leadsquared_mx_Business_Entity.value +
-            "&referredby=" + event.target.referredby.value)
+            "&remark=" + event.target.remark.value +
+            '&resume=' + completeurl +
+            "&leadsquared-mx_Business_Entity=" + event.target.leadsquared_mx_Business_Entity.value)
 
     }
+
+
+    // if (typeof window !== "undefined") {
+    //     jQuery(document).ready(function() {
+    //         jQuery('#submitbuttonform').click(function() {
+    //                         var selected = jQuery('#myMulti').val();      
+    //                         jQuery("#test3").val(selected);
+    //                         })   
+    //                 });
+    //   }
 
     return (
         <>
@@ -182,86 +166,7 @@ export default function GenericLP(State) {
                                 <h2 className="wow fadeInUp delay-0-4s mt-20 fontt30"><span className="gericcolor">YOMA’s Temporary Staffing Solutions</span> is what you need.</h2>
                             </div>
                         </div>
-
                         <div className="col-lg-5">
-                        <div className="hero-section-form bg-white p-20 wow fadeInRight delay-0-4s">
-                           <div className="section-title">
-                               <h2 className="mb-0">Business Query</h2>
-                           </div>
-                            <p>Looking for quicker assistance? Fill in your details and get a call back within 24 working hours.</p>
-                           <form id="contactForm" onSubmit={registerUser}>
-                                <div className="row">
-                                    <div className="form-group col-sm-6">                                   
-                                        <input type="text" id="name" name="name" className="form-control" placeholder="Your Name*" required/>
-                                    </div>
-                                    <div className="form-group col-sm-6">                                   
-                                    <input type="email" name="leadsquared_EmailAddress" id="leadsquared_EmailAddress" className="form-control" placeholder="Your Email*" required />
-                                    </div>
-                                    <div className="form-group col-sm-6">                                   
-                                    <input type="text" name="phone_number" id="phone_number" required="" maxlength="10" minlength="10" className="form-control" placeholder="Phone No.*"/>
-                                    </div>
-                                    <div className="col-sm-6">
-                                            <div className="form-group">                                                
-                                            <input type="text" name="leadsquared_JobTitle" id="leadsquared_JobTitle" className="form-control" placeholder="Designation" />
-                                            </div>
-                                        </div>
-                                        <div className="form-group col-sm-12">                                   
-                                    <input type="text" name="leadsquared_Company" id="leadsquared_Company" className="form-control" placeholder="Company Name*" required />
-                                    </div>
-                                    <div className="form-group col-sm-6">
-                                    <select className="form-control" name="interest_in" required>
-                                       <option value="">Interested In*</option>
-                                       <option value="Interested in knowing more">Interested in knowing more</option>
-                                       <option value="Manpower services">Manpower services</option>
-                                       <option value="Looking for job">Looking for job</option>
-                                       <option value="Temporary staffing">Temporary staffing</option>
-                                       <option value="Industrial manpower">Industrial manpower</option>
-                                       <option value="Staff augmentation">Staff augmentation</option>
-                                       <option value="Managed services">Managed services</option>
-                                       <option value="Shared resource program">Shared resource program</option>
-                                       <option value="Apprenticeship program (NAPS)">Apprenticeship program (NAPS)</option>
-                                    </select>                  
-                                    </div>
-
-                                    <div className="form-group col-sm-6">
-                                    <select className="form-control" name="referredby">
-                                        <option value="Referred By">--Referred By--</option>
-                                        <option value="Sales Representative">Sales Representative</option>
-                                        <option value="Email">Email</option>
-                                        <option value="Social Media">Social Media</option>
-                                        <option value="Google Search">Google Search</option>
-                                        <option value="Website">Website</option>
-                                        <option value="Reference">Reference</option>
-                                    </select>                 
-                                    </div>
-
-                                    <div className="col-lg-6 d-none">
-                                        <div className="form-group">
-                                            <label>Business Entity*</label>                              
-                                            <select className="form-control" name="Business_Entity">
-                                                <option value="Ken Blanchard Companies">Ken Blanchard Companies</option>
-                                            </select>
-                                            <div className="help-block with-errors"></div>
-                                        </div>
-                                        </div>                                    
-                                      
-                                    <div className="form-group d-none col-sm-12">                                   
-                                    <input type="text" name="leadsquared_mx_Business_Entity" id="leadsquared_mx_Business_Entity" value="YOMA Business Solutions" className="form-control" />
-                                    </div>
-
-                                    <div className="col-sm-12">
-                                            <div className="form-group mb-0">
-                                                <input id="submitbuttonform" type="submit" className="theme-btn btnwidth" value="Send Message"/>
-                                            </div>
-                                            <div className="clearfix"></div>
-                                            <p id="showlabel" style={{ display: "none" }}></p>
-                                        </div>
-                                </div>                                
-                            </form>
-                       </div>
-                    </div>
-                    
-                        {/* <div className="col-lg-5">
                             <div className="hero-section-form bg-white p-20 wow fadeInRight delay-0-4s">
 
                                 <Tabs className="tbform">
@@ -270,34 +175,57 @@ export default function GenericLP(State) {
 
                                     </div>
                                     <TabList className="tabbtn">
-                                        <Tab><input name="tt" id="cca" type="radio" /><label for="cca" className="mlefc">Employer</label></Tab>
-                                        <Tab><input name="tt" id="ccb" type="radio" /> <label for="ccb">Job Seeker</label></Tab>
+                                        <Tab><label for="cca" className="mlefc">Employer</label></Tab>
+                                        <Tab><label for="ccb">Job Seeker</label></Tab>
                                     </TabList>
 
                                     <TabPanel>
                                         <form id="contactForm" onSubmit={HiringPartner} className="gnform">
                                             <div className="row">
-                                                <div className="form-group col-sm-6">
-                                                    <input type="text" name="leadsquared_Company" id="leadsquared_Company" className="form-control" placeholder="Company Name*" required />
 
-                                                </div>
                                                 <div className="form-group col-sm-6">
                                                     <input type="text" id="name" name="name" className="form-control" placeholder="Name*" required />
-
                                                 </div>
+
+                                                <div className="form-group col-sm-6">
+                                                    <input type="text" name="leadsquared_Company" id="leadsquared_Company" className="form-control" placeholder="Company Name*" required />
+                                                </div>
+
                                                 <div className="form-group col-sm-6">
                                                     <input type="text" name="leadsquared_JobTitle" id="leadsquared_JobTitle" className="form-control" placeholder="Designation*" pattern="[a-zA-Z -]*$" title="Only alphabets are allowed" required />
-
                                                 </div>
+
                                                 <div className="col-sm-6">
                                                     <input type="text" name="phone_number" id="phone_number" pattern="[0-9]*" maxlength="10" minlength="10" className="form-control" placeholder="Mobile No.*" required />
                                                 </div>
                                                 <div className="form-group col-sm-12">
                                                     <input type="email" name="leadsquared_EmailAddress" id="leadsquared_EmailAddress" className="form-control" placeholder="Email*" required />
                                                 </div>
+
                                                 <div className="form-group col-sm-12">
-                                                    <input type="text" name="remark" id="remark" className="form-control" placeholder="What sort of hiring you are looking for" required />
-                                                </div>                                                
+                                                    <select name="interest_in" required>
+                                                        <option value="">Interested In*</option>
+                                                        <option value="Interested in knowing more">Interested in knowing more</option>
+                                                        <option value="Temporary staffing">Temporary staffing</option>
+                                                        <option value="Industrial manpower">Industrial manpower</option>
+                                                        <option value="Staff augmentation">Staff augmentation</option>
+                                                        <option value="Managed services">Managed services</option>
+                                                        <option value="Shared resource program">Shared resource program</option>
+                                                        <option value="Apprenticeship program (NAPS)">Apprenticeship program (NAPS)</option>
+                                                    </select>
+                                                </div>
+
+                                                <div className="form-group col-sm-12">
+                                                    <select name="referredby" required>
+                                                        <option value="">Referred By*</option>
+                                                        <option value="Sales Representative">Sales Representative</option>
+                                                        <option value="Email">Email</option>
+                                                        <option value="Social Media">Social Media</option>
+                                                        <option value="Google Search">Google Search</option>
+                                                        <option value="Website">Website</option>
+                                                        <option value="Reference">Reference</option>
+                                                    </select>
+                                                </div>
 
                                                 <div className="form-group d-none col-sm-12">
                                                     <input type="text" name="leadsquared_mx_Business_Entity" id="leadsquared_mx_Business_Entity" value="YOMA Business Solutions" className="form-control" required />
@@ -305,7 +233,7 @@ export default function GenericLP(State) {
 
                                                 <div className="col-sm-12">
                                                     <div className="form-group mb-0">
-                                                        <input id="submitbuttonform" type="submit" className="theme-btn btnwidthc" value="Send Message"/>
+                                                        <input id="submitbuttonform" type="submit" className="theme-btn btnwidthc" value="Submit" />
                                                     </div>
                                                     <div className="clearfix"></div>
                                                     <p id="showlabel" style={{ display: "none" }}></p>
@@ -317,7 +245,7 @@ export default function GenericLP(State) {
                                         <form id="contactForm" onSubmit={Jobseeker} className="gnform comment-form">
                                             <div className="row">
                                                 <div className="form-group col-sm-6">
-                                                    <input type="text" name="leadsquared_Company" id="leadsquared_Company" className="form-control" placeholder="Current or last Company*" required />
+                                                    <input type="text" name="leadsquared_Company" id="leadsquared_Company" className="form-control" placeholder="Company Name or Fresher*" required />
                                                 </div>
                                                 <div className="form-group col-sm-6">
                                                     <input type="text" id="name" name="name" className="form-control" placeholder="Name*" required />
@@ -330,17 +258,59 @@ export default function GenericLP(State) {
                                                 <div className="col-sm-6">
                                                     <input type="text" name="phone_number" id="phone_number" pattern="[0-9]*" maxlength="10" minlength="10" className="form-control" placeholder="Mobile No.*" required />
                                                 </div>
-                                                <div className="form-group col-sm-6">
+                                                <div className="form-group col-sm-12">
                                                     <input type="email" name="leadsquared_EmailAddress" id="leadsquared_EmailAddress" className="form-control" placeholder="Email*" required />
                                                 </div>
-                                                <div className="form-group col-sm-6">
-                                                    <input type="text" name="remark" id="remark" className="form-control" placeholder="Any preferred job location" required />
+                                                <div className="form-group col-sm-12">
+                                                    {/* <input type="text" id="test3" value="" name="remark" className="d-none"/> */}
+                                                    
+                                                    <select name="remark" required>
+                                                        <option value="">Select State</option>
+                                                        <option value="any">Any</option>
+                                                        <option value="Delhi NCR">Delhi NCR</option>
+                                                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                                        <option value="Assam">Assam</option>
+                                                        <option value="Bihar">Bihar</option>
+                                                        <option value="Chhattisgarh">Chhattisgarh</option>
+                                                        <option value="Goa">Goa</option>
+                                                        <option value="Gujarat">Gujarat</option>
+                                                        <option value="Haryana">Haryana</option>
+                                                        <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                                        <option value="Jharkhand">Jharkhand</option>
+                                                        <option value="Karnataka">Karnataka</option>
+                                                        <option value="Kerala">Kerala</option>
+                                                        <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                                        <option value="Maharashtra">Maharashtra</option>
+                                                        <option value="Manipur">Manipur</option>
+                                                        <option value="Meghalaya">Meghalaya</option>
+                                                        <option value="Mizoram">Mizoram</option>
+                                                        <option value="Nagaland">Nagaland</option>
+                                                        <option value="Odisha">Odisha</option>
+                                                        <option value="Punjab">Punjab</option>
+                                                        <option value="Rajasthan">Rajasthan</option>
+                                                        <option value="Sikkim">Sikkim</option>
+                                                        <option value="Tamil Nadu">Tamil Nadu</option>
+                                                        <option value="Telangana">Telangana</option>
+                                                        <option value="Tripura">Tripura</option>
+                                                        <option value="Uttarakhand">Uttarakhand</option>
+                                                        <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                                        <option value="West Bengal">West Bengal</option>
+                                                        <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                                                        <option value="Chandigarh">Chandigarh</option>
+                                                        <option value="Dadra and Nagar Haveli and Daman & Diu">Dadra and Nagar Haveli and Daman & Diu</option>
+                                                        <option value="The Government of NCT of Delhi">The Government of NCT of Delhi</option>
+                                                        <option value="Jammu & Kashmir">Jammu & Kashmir</option>
+                                                        <option value="Ladakh">Ladakh</option>
+                                                        <option value="Lakshadweep">Lakshadweep</option>
+                                                        <option value="Puducherry">Puducherry</option>
+                                                    </select>
                                                 </div>
 
                                                 <div className="col-sm-12 ajcfile">
                                                     <div className="form-group">
                                                         <label for="ResumeFile">Resume File (Optional)</label>
-                                                        <input type="file" id="ResumeFile" name="ResumeFile" onChange={uploadToClient} required/>
+                                                        <input type="file" id="ResumeFile" name="ResumeFile" onChange={uploadToClient} required />
                                                     </div>
                                                 </div>
 
@@ -350,7 +320,7 @@ export default function GenericLP(State) {
 
                                                 <div className="col-sm-12">
                                                     <div className="form-group mb-0">
-                                                        <input id="submitbuttonform" type="submit" className="theme-btn btnwidthc" value="Send Message"  onClick={uploadToServer} />
+                                                        <input id="submitbuttonform" type="submit" className="theme-btn btnwidthc" value="Submit" onClick={uploadToServer} />
                                                     </div>
                                                     <div className="clearfix"></div>
                                                     <p id="showlabel" style={{ display: "none" }}></p>
@@ -360,7 +330,7 @@ export default function GenericLP(State) {
                                     </TabPanel>
                                 </Tabs>
                             </div>
-                        </div> */}
+                        </div>
                     </div>
                 </div>
                 <div className="hero-line-shape">
