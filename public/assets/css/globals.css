@@ -236,14 +236,14 @@
 
 
 .bloglinkh ol li{
-  list-style: initial;
+  list-style: auto;
 }
 .bloglinkh ol{
   padding-left: 20px;
 }
 
 .bloglinkh ul li{
-  list-style: initial;
+  list-style: auto;
 }
 .bloglinkh ul{
   padding-left: 20px;
