@@ -235,6 +235,13 @@
 }
 
 
+.bloglinkh ol li{
+  list-style: initial;
+}
+.bloglinkh ol{
+  padding-left: 20px;
+}
+
 .bloglinkh ul li{
   list-style: initial;
 }
