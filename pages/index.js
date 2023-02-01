@@ -77,7 +77,7 @@ export default function Home() {
     <>
       <Head>
          <title>Yoma Business Solutions | Staffing | BYLD Group</title>
-         <meta name="description" content="Yoma Business Solutions is a one-stop HR outsourcing and corporate staffing company. It offers a skilled workforce based on the diverse requirements of third-party payroll companies."/>
+         <meta name="description" content="Yoma Business Solutions is a one-stop HR outsourcing and corporate staffing company. It offers a skilled workforce based on the diverse requirements of third- party payroll companies."/>
       </Head>
       
  <section className="hero-section paddingb">

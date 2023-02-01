@@ -233,3 +233,11 @@
 .ajcfile .form-group{
   margin-bottom: 0px !important;
 }
+
+
+.bloglinkh ul li{
+  list-style: initial;
+}
+.bloglinkh ul{
+  padding-left: 20px;
+}
