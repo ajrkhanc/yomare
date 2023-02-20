@@ -329,7 +329,7 @@ export default function singleblog({ posts, posts5, cats, postfeedback }) {
                                     </ul>
                                 </div>
 
-                                <div className="widget widget-recent-post wow fadeInUp delay-0-4s">
+                                {/* <div className="widget widget-recent-post wow fadeInUp delay-0-4s">
                                     <h3 className="widget-title">Upcoming Events</h3>
                                     <div className="widget-news-wrap">
 
@@ -357,7 +357,7 @@ export default function singleblog({ posts, posts5, cats, postfeedback }) {
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> */}
 
 
 

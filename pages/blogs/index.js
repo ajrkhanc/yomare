@@ -209,7 +209,7 @@ export default function index({posts, cats}) {
                                 </ul>
                             </div>
                             
-                            <div className="widget widget-recent-post wow fadeInUp delay-0-4s">
+                            {/* <div className="widget widget-recent-post wow fadeInUp delay-0-4s">
                                 <h3 className="widget-title">Upcoming Events</h3>
                                 <div className="widget-news-wrap">
                                    
@@ -238,7 +238,7 @@ export default function index({posts, cats}) {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
                             
                             
                             
