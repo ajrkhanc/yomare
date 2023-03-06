@@ -32,7 +32,7 @@ export default function IndustrialStaffing() {
                         <p className="text-justify">
                         So far, our corporate staffing services have helped hundreds of apprentices to learn vital work skills and become job-ready, while the other few hundreds are in the process of acquiring those skills across sectors.
                         </p>
-                        <a className="themcolor" target="_blank" href="https://www.abgus.org/content.php?pid=7#:~:text=Every%20year%2C%20out%20of%2015,of%20technical%20and%20soft%20skills."> ABGUS</a>
+                        <a className="themcolor" target="_blank" href="https://www.abgus.org"> ABGUS</a>
                         </div>
                     </div>
                     <div className="col-lg-6">
