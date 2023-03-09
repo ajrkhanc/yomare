@@ -226,7 +226,7 @@ const ContactUs = () => {
         <div className="contact-page-map">
             <div className="our-location">
                 <div className="section-title text-center pb-20">                            
-                    <h2 className="mainh1"><span>Our </span>presence</h2>
+                    <h2 className="mainh1"><span>Our </span>Presence</h2>
                 </div>
             <iframe loading="lazy" src="https://www.google.com/maps/d/embed?mid=1BumsIZfHc5AelgKSYRgALT6JOYw62k9o&#038;hl=en" width="100%" height="550"></iframe>
             </div>
