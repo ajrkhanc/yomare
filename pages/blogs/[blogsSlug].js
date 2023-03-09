@@ -17,18 +17,18 @@ import moment from 'moment'
 
 
 export async function getServerSideProps(context) {
-    const post5 = await fetch('https://yomablogs-kxqm.onrender.com/api/posts')
+    const post5 = await fetch('https://yomablogs.vercel.app/api/posts')
     const posts5 = await post5.json()
 
-    const cat = await fetch('https://yomablogs-kxqm.onrender.com/api/categories')
+    const cat = await fetch('https://yomablogs.vercel.app/api/categories')
     const cats = await cat.json()
 
 
     const posturl = context.params.blogsSlug;
-    const res = await fetch(`https://yomablogs-kxqm.onrender.com/api/post/${posturl}`)
+    const res = await fetch(`https://yomablogs.vercel.app/api/post/${posturl}`)
     const posts = await res.json()
 
-    const getfeedback = await fetch(`https://yomablogs-kxqm.onrender.com/api/posts/feed/${posturl}`)
+    const getfeedback = await fetch(`https://yomablogs.vercel.app/api/posts/feed/${posturl}`)
     console.log(getfeedback)
     const postfeedback = await getfeedback.json()
 
@@ -53,7 +53,7 @@ const submitFeedback = async (event) => {
     const feedback = event.target.comments.value;
     const posturl = findparams[3];
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'https://yomablogs-kxqm.onrender.com/api/feedback/');
+    xhr.open('POST', 'https://yomablogs.vercel.app/api/feedback/');
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     xhr.send('feedback=' + feedback + '&name=' + name + '&email=' + email + '&postslug=' + posturl);
 
