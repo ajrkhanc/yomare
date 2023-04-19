@@ -121,6 +121,34 @@ class MyDocument extends Document {
           />
           <script src="https://cdnjs.cloudflare.com/ajax/libs/fingerprintjs2/1.5.1/fingerprint2.min.js"></script>
 
+
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+              {
+                "@context": "https://schema.org",
+                "@type": "Corporation",
+                "name": "YOMA Business Solutions",
+                "alternateName": "YOMA Multinational",
+                "url": "https://www.yomabusinesssolutions.com/",
+                "logo": "https://www.yomabusinesssolutions.com/assets/img/logo/yoma-logo.png",
+                "sameAs": [
+                  "https://www.facebook.com/YOMABusinessSolutions",
+                  "https://twitter.com/Yomasolutions",
+                  "https://www.instagram.com/yoma.business/",
+                  "https://www.youtube.com/@YOMAbusinesssolutions",
+                  "https://www.linkedin.com/company/yomabusinesssolutions/",
+                  "https://in.pinterest.com/yomasolutions/",
+                  "https://soundcloud.com/yoma-multinational",
+                  "https://www.tumblr.com/yomamultinational",
+                  "https://en.wikipedia.org/w/index.php?title=Special:Homepage&source=personaltoolslink&namespace=-1",
+                  "https://github.com/yomabusinesssolutions",
+                  "https://www.yomabusinesssolutions.com/"
+                ]
+              }
+          `,
+            }}
+          />
         </Head>
         <body>
           <Main />
