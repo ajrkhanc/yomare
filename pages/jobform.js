@@ -3,7 +3,7 @@ import Head from "next/head";
 
 
 export async function getServerSideProps() {
-    const res = await fetch('https://yomablogs-jmwv.onrender.com/uploads/proanto/resume/state.json')
+    const res = await fetch('https://yomablogs.vercel.app/uploads/proanto/resume/state.json')
     const Stateall = await res.json()
     const State = Object.keys(Stateall).map(key => Stateall[key])
 
@@ -59,7 +59,7 @@ export default function PrivatePage(State, currentState) {
         // body.append("file2", image2);
 
         console.log(random1)
-        const response = await fetch("https://yomablogs-jmwv.onrender.com/api/resume", {
+        const response = await fetch("https://yomablogs.vercel.app/api/resume", {
             method: "POST",
             body
         });
@@ -113,7 +113,7 @@ export default function PrivatePage(State, currentState) {
 
 
         var xhr = new XMLHttpRequest();
-        xhr.open('POST', 'https://yomablogs-jmwv.onrender.com/api/jobform/');
+        xhr.open('POST', 'https://yomablogs.vercel.app/api/jobform/');
         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
         xhr.send('FullName=' + FullName +
             '&Gender=' + Gender +

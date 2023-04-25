@@ -44,7 +44,7 @@ export default function GenericLP(State) {
     //     body.append("randomno", random1);
       
     //     console.log(random1)
-    //     const response = await fetch("https://yomablogs-jmwv.onrender.com/api/resume", {
+    //     const response = await fetch("https://yomablogs.vercel.app/api/resume", {
     //         method: "POST",
     //         body
     //     });
@@ -92,7 +92,7 @@ export default function GenericLP(State) {
 
 
     // const Jobseeker = async event => {
-    //     var imgurl = "https://yomablogs-jmwv.onrender.com/uploads/proanto/resume/";
+    //     var imgurl = "https://yomablogs.vercel.app/uploads/proanto/resume/";
     //     var file = image.name.replace(/\s/g, '')
     //     var filenew = random1 + '_' + file;
     //     var completeurl = imgurl + filenew;

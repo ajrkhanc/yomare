@@ -3,10 +3,10 @@ import Head from 'next/head'
 import  moment from 'moment'
 
 export async function getServerSideProps() {
-    const res = await fetch('https://yomablogs-jmwv.onrender.com/api/posts')
+    const res = await fetch('https://yomablogs.vercel.app/api/posts')
     const posts = await res.json()
 
-    const cat = await fetch('https://yomablogs-jmwv.onrender.com/api/categories')
+    const cat = await fetch('https://yomablogs.vercel.app/api/categories')
     const cats = await cat.json()
 
     return {
