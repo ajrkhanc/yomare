@@ -72,6 +72,20 @@ class MyDocument extends Document {
             }}
           />
 
+          {/* <!-- Google tag (gtag.js) --> */}
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-YXKPZH4LLZ"></script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+              window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YXKPZH4LLZ');
+          `,
+            }}
+          />
+
           <script type="text/javascript" src="https://web-in21.mxradon.com/t/Tracker.js"></script>
           <script type="text/javascript">
             pidTracker('53539');
