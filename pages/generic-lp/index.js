@@ -163,7 +163,7 @@ export default function GenericLP(State) {
                         <div className="col-lg-7">
                             <div className="hero-content text-white rmb-65">
                                 <h2 className="wow fadeInUp delay-0-4s mt-20 fontt30">Thinking About Simplifying Bulk Hiring and HR Compliance Formalities?</h2>
-                                <h2 className="wow fadeInUp delay-0-4s mt-20 fontt30">Unlock the full potential of your organization with <span className="gericcolor">YOMA Staffing Solutions.</span></h2>
+                                <h2 className="wow fadeInUp delay-0-4s mt-20 fontt30">Unlock the full potential of your organization with <br></br><span className="gericcolor">YOMA Staffing Solutions.</span></h2>
                             </div>
                         </div>
                         <div className="col-lg-5">
