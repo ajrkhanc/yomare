@@ -148,7 +148,7 @@ export default function GenericLP(State) {
 
                     document.getElementById("showlabel").style.display = "block";
                     window.setTimeout(function() {
-                       window.location.href = "/thank-you-lp"
+                       window.location.href = "/generic-lp/thank-you-lp"
                     }, 3000);
 
                 } else {

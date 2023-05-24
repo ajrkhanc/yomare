@@ -80,7 +80,7 @@ export default function GenericLP(State) {
 
                     document.getElementById("showlabel").style.display = "block";
                     window.setTimeout(function () {
-                        window.location.href = "/thank-you-lp"
+                        window.location.href = "/generic-lp/thank-you-lp"
                     }, 3000);
 
                 } else {
@@ -121,9 +121,9 @@ export default function GenericLP(State) {
                     document.getElementById("showlabel").innerHTML = "Thank you for submitting your details. Our subject matter experts will connect you within 24 working hours.";
 
                     document.getElementById("showlabel").style.display = "block";
-                    // window.setTimeout(function () {
-                    //     window.location.href = "/thank-you-lp"
-                    // }, 3000);
+                    window.setTimeout(function () {
+                        window.location.href = "/generic-lp/thank-you-lp"
+                    }, 3000);
 
                 } else {
                     alert('There was a problem with the request.');
@@ -191,11 +191,11 @@ export default function GenericLP(State) {
                                                     <input type="text" name="leadsquared_Company" id="leadsquared_Company" className="form-control" placeholder="Company Name*" required />
                                                 </div>
 
-                                                <div className="form-group col-sm-6">
+                                                <div className="form-group col-sm-12">
                                                     <input type="text" name="leadsquared_JobTitle" id="leadsquared_JobTitle" className="form-control" placeholder="Designation*" pattern="[a-zA-Z -]*$" title="Only alphabets are allowed" required />
                                                 </div>
 
-                                                <div className="col-sm-6">
+                                                <div className="col-sm-12">
                                                     <input type="text" name="phone_number" id="phone_number" pattern="[0-9]*" maxlength="10" minlength="10" className="form-control" placeholder="Mobile No.*" required />
                                                 </div>
                                                 <div className="form-group col-sm-12">
@@ -215,15 +215,9 @@ export default function GenericLP(State) {
                                                     </select>
                                                 </div>
 
-                                                <div className="form-group col-sm-12">
+                                                <div className="form-group col-sm-12 d-none">
                                                     <select name="referredby" required>
-                                                        <option value="">Referred By*</option>
-                                                        <option value="Sales Representative">Sales Representative</option>
-                                                        <option value="Email">Email</option>
-                                                        <option value="Social Media">Social Media</option>
-                                                        <option value="Google Search">Google Search</option>
-                                                        <option value="Website">Website</option>
-                                                        <option value="Reference">Reference</option>
+                                                        <option value="Google Ads">Google Ads</option>                                                        
                                                     </select>
                                                 </div>
 
@@ -251,11 +245,11 @@ export default function GenericLP(State) {
                                                     <input type="text" id="name" name="name" className="form-control" placeholder="Name*" required />
 
                                                 </div>
-                                                <div className="form-group col-sm-6">
+                                                <div className="form-group col-sm-12">
                                                     <input type="text" name="qualification" id="qualification" className="form-control" placeholder="Qualification*" pattern="[a-zA-Z -]*$" title="Only alphabets are allowed" required />
 
                                                 </div>
-                                                <div className="col-sm-6">
+                                                <div className="col-sm-12">
                                                     <input type="text" name="phone_number" id="phone_number" pattern="[0-9]*" maxlength="10" minlength="10" className="form-control" placeholder="Mobile No.*" required />
                                                 </div>
                                                 <div className="form-group col-sm-12">
