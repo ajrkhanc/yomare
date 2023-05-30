@@ -360,7 +360,7 @@ export default function Home() {
                         <div className="col-sm-6">
                            <div className="form-group">
                               <label htmlFor="email">Your email address</label>
-                              <input type="email" id="email" name="email" className="form-control" placeholder="Email*" required=""/>
+                              <input type="email" id="email" name="email" className="form-control" placeholder="Work Email/Email*" required=""/>
                            </div>
                         </div>
                         <div className="col-sm-6">

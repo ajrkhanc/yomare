@@ -195,7 +195,7 @@ export default function GenericLP(State) {
                                         <input type="text" id="name" name="name" className="form-control" placeholder="Your Name*" required/>
                                     </div>
                                     <div className="form-group col-sm-6">                                   
-                                    <input type="email" name="leadsquared_EmailAddress" id="leadsquared_EmailAddress" className="form-control" placeholder="Your Email*" required />
+                                    <input type="email" name="leadsquared_EmailAddress" id="leadsquared_EmailAddress" className="form-control" placeholder="Work Email/Email*" required />
                                     </div>
                                     <div className="form-group col-sm-6">                                   
                                     <input type="text" name="phone_number" id="phone_number" required="" maxlength="10" minlength="10" className="form-control" placeholder="Phone No.*"/>
@@ -293,7 +293,7 @@ export default function GenericLP(State) {
                                                     <input type="text" name="phone_number" id="phone_number" pattern="[0-9]*" maxlength="10" minlength="10" className="form-control" placeholder="Mobile No.*" required />
                                                 </div>
                                                 <div className="form-group col-sm-12">
-                                                    <input type="email" name="leadsquared_EmailAddress" id="leadsquared_EmailAddress" className="form-control" placeholder="Email*" required />
+                                                    <input type="email" name="leadsquared_EmailAddress" id="leadsquared_EmailAddress" className="form-control" placeholder="Work Email/Email*" required />
                                                 </div>
                                                 <div className="form-group col-sm-12">
                                                     <input type="text" name="remark" id="remark" className="form-control" placeholder="What sort of hiring you are looking for" required />
@@ -331,7 +331,7 @@ export default function GenericLP(State) {
                                                     <input type="text" name="phone_number" id="phone_number" pattern="[0-9]*" maxlength="10" minlength="10" className="form-control" placeholder="Mobile No.*" required />
                                                 </div>
                                                 <div className="form-group col-sm-6">
-                                                    <input type="email" name="leadsquared_EmailAddress" id="leadsquared_EmailAddress" className="form-control" placeholder="Email*" required />
+                                                    <input type="email" name="leadsquared_EmailAddress" id="leadsquared_EmailAddress" className="form-control" placeholder="Work Email/Email*" required />
                                                 </div>
                                                 <div className="form-group col-sm-6">
                                                     <input type="text" name="remark" id="remark" className="form-control" placeholder="Any preferred job location" required />

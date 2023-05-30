@@ -174,10 +174,10 @@ export default function GenericLP(State) {
                                         <h2 className="mb-0 fmmmm">For all Sorts of Hiring or Job Needs</h2>
 
                                     </div>
-                                    <TabList className="tabbtn">
+                                    {/* <TabList className="tabbtn">
                                         <Tab><label for="cca" className="mlefc">Employer</label></Tab>
                                         <Tab><label for="ccb">Job Seeker</label></Tab>
-                                    </TabList>
+                                    </TabList> */}
 
                                     <TabPanel>
                                         <form id="contactForm" onSubmit={HiringPartner} className="gnform">
@@ -199,7 +199,7 @@ export default function GenericLP(State) {
                                                     <input type="text" name="phone_number" id="phone_number" pattern="[0-9]*" maxlength="10" minlength="10" className="form-control" placeholder="Mobile No.*" required />
                                                 </div>
                                                 <div className="form-group col-sm-12">
-                                                    <input type="email" name="leadsquared_EmailAddress" id="leadsquared_EmailAddress" className="form-control" placeholder="Email*" required />
+                                                    <input type="email" name="leadsquared_EmailAddress" id="leadsquared_EmailAddress" className="form-control" placeholder="Work Email/Email*" required />
                                                 </div>
 
                                                 <div className="form-group col-sm-12">
@@ -235,7 +235,7 @@ export default function GenericLP(State) {
                                             </div>
                                         </form>
                                     </TabPanel>
-                                    <TabPanel>
+                                    {/* <TabPanel>
                                         <form id="contactForm" onSubmit={Jobseeker} className="gnform comment-form">
                                             <div className="row">
                                                 <div className="form-group col-sm-6">
@@ -253,11 +253,9 @@ export default function GenericLP(State) {
                                                     <input type="text" name="phone_number" id="phone_number" pattern="[0-9]*" maxlength="10" minlength="10" className="form-control" placeholder="Mobile No.*" required />
                                                 </div>
                                                 <div className="form-group col-sm-12">
-                                                    <input type="email" name="leadsquared_EmailAddress" id="leadsquared_EmailAddress" className="form-control" placeholder="Email*" required />
+                                                    <input type="email" name="leadsquared_EmailAddress" id="leadsquared_EmailAddress" className="form-control" placeholder="Work Email/Email*" required />
                                                 </div>
-                                                <div className="form-group col-sm-12">
-                                                    {/* <input type="text" id="test3" value="" name="remark" className="d-none"/> */}
-                                                    
+                                                <div className="form-group col-sm-12">                                                    
                                                     <select name="remark" required>
                                                         <option value="">Select State</option>
                                                         <option value="any">Any</option>
@@ -321,7 +319,7 @@ export default function GenericLP(State) {
                                                 </div>
                                             </div>
                                         </form>
-                                    </TabPanel>
+                                    </TabPanel> */}
                                 </Tabs>
                             </div>
                         </div>

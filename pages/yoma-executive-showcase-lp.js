@@ -59,7 +59,7 @@ export default function YomaExecutiveShowcase(){
                                         <input type="text" id="name" name="name" className="form-control" placeholder="Your Name*" required/>
                                     </div>
                                     <div className="form-group col-sm-6">                                   
-                                    <input type="email" name="leadsquared_EmailAddress" id="leadsquared_EmailAddress" className="form-control" placeholder="Your Email*" required />
+                                    <input type="email" name="leadsquared_EmailAddress" id="leadsquared_EmailAddress" className="form-control" placeholder="Work Email/Email*" required />
                                     </div>
                                     <div className="form-group col-sm-6">                                   
                                     <input type="text" name="phone_number" id="phone_number" required="" pattern="[0-9]*" maxlength="10" minlength="10" className="form-control" placeholder="Phone No.*"/>

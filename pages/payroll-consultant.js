@@ -235,7 +235,7 @@ export default function PayrollConsultant(){
                                         </div>
                                         <div className="col-sm-6">
                                             <div className="form-group">                                                
-                                                <input type="email" id="email" name="email" className="form-control" placeholder="Your Email*" required />
+                                                <input type="email" id="email" name="email" className="form-control" placeholder="Work Email/Email*" required />
                                             </div>
                                         </div>
 
