@@ -3,7 +3,6 @@ import React from 'react'
 export default function Footer() {
     const registerUser = async event => {
         event.preventDefault()
-        document.getElementById("submitbuttonform").value = "Submitting form...."
         const xhttp = new XMLHttpRequest();
         xhttp.onload = function () {
             console.log(this.responseText);
@@ -13,9 +12,9 @@ export default function Footer() {
         xhttp.onreadystatechange = function () {
             if (xhttp.readyState == 4) {
                 if (xhttp.status == 200) {
-                    document.getElementById("showlabel").innerHTML = "Thank you for submitting your details.";
+                    document.getElementById("showlabelc").innerHTML = "Thank you for submitting your details.";
 
-                    document.getElementById("showlabel").style.display = "block";
+                    document.getElementById("showlabelc").style.display = "block";
                     window.setTimeout(function() {
                     //    window.location.href = "/thank-you-lp"
                     }, 3000);
@@ -79,7 +78,7 @@ export default function Footer() {
                                     <button type="submit" value="submit"><i className="fa fa-location-arrow"></i></button>
                                     <label id="submitbuttonform"></label>
                                 </form>
-                                <p id="showlabel" style={{ display: "none" }}></p>
+                                <p id="showlabelc" style={{ display: "none" }}></p>
                             </div>
                         </div>
                     </div>
