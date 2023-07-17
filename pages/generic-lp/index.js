@@ -171,7 +171,7 @@ export default function GenericLP(State) {
 
                                 <Tabs className="tbform">
                                     <div className="section-title">
-                                        <h2 className="mb-0 fmmmm">For all Sorts of Hiring or Job Needs</h2>
+                                        <h2 className="mb-0 fmmmm">Looking for HR Services? Look no Further</h2>
 
                                     </div>
                                     {/* <TabList className="tabbtn">
