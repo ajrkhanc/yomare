@@ -129,6 +129,16 @@ export default function singleblog({ posts, posts5, cats, postfeedback }) {
                 <meta property="og:description" content={posts.Description} />
                 <meta property="og:image" name="image" content={posts.ImageURL} />
                 <meta property="og:url" content={posts.posturl} />
+               
+                
+
+                <script type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: 
+              posts.Schema
+            }}
+          />
+
 
             </Head>
 
