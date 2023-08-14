@@ -1,6 +1,8 @@
 import Layout from '../components/Layout/Layout'
 import GenericLP from '../components/GenericLP/Layout'
 import '../styles/globals.css'
+import { useRouter } from "next/router";
+import Head from 'next/head'
 
 function MyApp({ Component, pageProps, router }) {
 
@@ -16,8 +18,13 @@ function MyApp({ Component, pageProps, router }) {
 }
 
 else {
+  const router = useRouter();
+  const canonicalUrl = (`https://yomamultinational.com` + (router.asPath === "/" ? "": router.asPath)).split("?")[0];
   return (
     <Layout>
+      <Head>
+        <link rel="canonical" href={canonicalUrl} />
+        </Head>
     <Component {...pageProps} />
     </Layout>
   )

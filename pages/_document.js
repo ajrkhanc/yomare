@@ -24,10 +24,8 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <meta charset="utf-8" />
-          <meta name="description" content="" />
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-          <title>Yoma Business Solutions | Staffing | BYLD Group</title>
           <link rel="icon" href="/favicon.png" />
           <meta name="google-site-verification" content="NLt2fLY-Zv4a3CTFZkpB45Mag6Muyi-aKAfBhzjAGKU" />
 

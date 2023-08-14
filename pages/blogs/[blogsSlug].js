@@ -108,7 +108,8 @@ export default function singleblog({ posts, posts5, cats, postfeedback }) {
         <>
             <Head>
                 <title>{posts.Title}</title>
-                <meta name="description" content="" />
+                <meta name="keywords" content={posts.Keywords}/>
+                <meta name="description" content={posts.Description}/>
                 <link rel="icon" href="/favicon.png" />
 
                 {/* Twitter */}
@@ -116,7 +117,7 @@ export default function singleblog({ posts, posts5, cats, postfeedback }) {
                 <meta name="twitter:site" content="@YomaSolutions" />
                 <meta name="twitter:creator" content="@YomaSolutions" />
                 <meta name="twitter:title" content={posts.Title} />
-                <meta name="twitter:description" content="" />
+                <meta name="twitter:description" content={posts.Description} />
                 <meta name="twitter:image" content={posts.ImageURL} />
                 <meta property="twitter:url" content={posts.posturl} />
 
@@ -125,7 +126,7 @@ export default function singleblog({ posts, posts5, cats, postfeedback }) {
                 <meta property="og:type" content="website" />
                 <meta property="og:site_name" content="YOMABusinessSolutions" />
                 <meta property="og:title" content={posts.Title} />
-                <meta property="og:description" content="" />
+                <meta property="og:description" content={posts.Description} />
                 <meta property="og:image" name="image" content={posts.ImageURL} />
                 <meta property="og:url" content={posts.posturl} />
 
