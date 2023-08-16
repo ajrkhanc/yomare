@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps, router }) {
 
 else {
   const router = useRouter();
-  const canonicalUrl = (`https://yomamultinational.com` + (router.asPath === "/" ? "": router.asPath)).split("?")[0];
+  const canonicalUrl = (`https://yomabusinesssolutions.com` + (router.asPath === "/" ? "": router.asPath)).split("?")[0];
   return (
     <Layout>
       <Head>
