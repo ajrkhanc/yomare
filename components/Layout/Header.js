@@ -101,9 +101,7 @@ export default function Header() {
                                         <li><a href="/contact-us">CONTACT US</a></li>
                                     </ul>
                                 </div>
-
-                            </nav>                        
-                            
+                            </nav>                            
                         </div>
                     </div>
                 </div>
