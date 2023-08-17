@@ -5,12 +5,12 @@ module.exports = {
     ignoreDuringBuilds: true,
   },
   redirects: async () => [
-    // {
-    //   source: '/:path*',
-    //   // has: [{ type: 'host', value: 'www.yomamultinational.com' }],
-    //   destination: 'https://yomabusinesssolutions.com/:path*',
-    //   permanent: true
-    // }
+    {
+      source: '/:path*',
+      // has: [{ type: 'host', value: 'www.yomamultinational.com' }],
+      destination: 'https://yomabusinesssolutions.com/:path*',
+      permanent: true
+    }
     // {
     //   source: '/blogs/tips-to-stay-focused-while-working-remotely',
     //   destination: '/tips-to-stay-focused-while-working-remotely',
